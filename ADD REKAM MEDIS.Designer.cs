@@ -64,10 +64,14 @@
             this.tglresepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlahObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idRekamMedisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.klinikBersalinDataSet1 = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rekamMedisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,9 +94,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 371);
+            this.panel1.Location = new System.Drawing.Point(308, 200);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 204);
+            this.panel1.Size = new System.Drawing.Size(682, 213);
             this.panel1.TabIndex = 26;
             // 
             // textBox5
@@ -192,9 +196,9 @@
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Riwayat_Penyakit", true));
-            this.textBox4.Location = new System.Drawing.Point(29, 147);
+            this.textBox4.Location = new System.Drawing.Point(7, 147);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 26);
+            this.textBox4.Size = new System.Drawing.Size(176, 26);
             this.textBox4.TabIndex = 7;
             // 
             // textBox3
@@ -216,7 +220,7 @@
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Id_Dokter", true));
-            this.textBox1.Location = new System.Drawing.Point(3, 53);
+            this.textBox1.Location = new System.Drawing.Point(14, 53);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(117, 26);
             this.textBox1.TabIndex = 4;
@@ -259,7 +263,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(15, 24);
+            this.label5.Location = new System.Drawing.Point(25, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 26);
             this.label5.TabIndex = 0;
@@ -278,17 +282,18 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SlateGray;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(689, 528);
+            this.button1.Location = new System.Drawing.Point(328, 442);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 47);
             this.button1.TabIndex = 25;
+            this.button1.Text = "Add Data";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(276, 9);
+            this.label7.Location = new System.Drawing.Point(517, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(242, 45);
             this.label7.TabIndex = 24;
@@ -411,12 +416,41 @@
             this.idRekamMedisDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idRekamMedisDataGridViewTextBoxColumn.Name = "idRekamMedisDataGridViewTextBoxColumn";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SlateGray;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(562, 442);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 47);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Simpan Data";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SlateGray;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(783, 442);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 47);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Clear Data";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // klinikBersalinDataSet1
+            // 
+            this.klinikBersalinDataSet1.DataSetName = "KlinikBersalinDataSet";
+            this.klinikBersalinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ADD_REKAM_MEDIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1281, 587);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -430,6 +464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rekamMedisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,5 +504,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tglresepDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlahObatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idRekamMedisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private KlinikBersalinDataSet klinikBersalinDataSet1;
     }
 }
