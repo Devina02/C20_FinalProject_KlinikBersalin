@@ -63,6 +63,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SlateGray;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(55, 362);
             this.button1.Name = "button1";
@@ -82,6 +83,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Dokter";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -93,6 +95,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Petugas";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -104,6 +107,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Kamar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 

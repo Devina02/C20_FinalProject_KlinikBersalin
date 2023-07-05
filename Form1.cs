@@ -20,6 +20,21 @@ namespace FinalProject_KlinikBersalin
         private void button1_Click(object sender, EventArgs e)
         {
             new ADD_DATA().Show();
-        }s
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new ADD_DATA_DOKTER().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new ADD_PETUGAS().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ADD_KAMAR().Show();
+        }
     }
 }
