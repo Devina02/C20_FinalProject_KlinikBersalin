@@ -44,8 +44,20 @@ namespace FinalProject_KlinikBersalin
 
         private void ADD_PETUGAS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'klinikBersalinDataSet.Shiftt' table. You can move, or remove it, as needed.
+            this.shifttTableAdapter.Fill(this.klinikBersalinDataSet.Shiftt);
             // TODO: This line of code loads data into the 'klinikBersalinDataSet.Petugas' table. You can move, or remove it, as needed.
             this.petugasTableAdapter.Fill(this.klinikBersalinDataSet.Petugas);
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
 
         }
     }
