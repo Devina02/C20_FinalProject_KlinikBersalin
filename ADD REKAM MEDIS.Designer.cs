@@ -57,18 +57,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.rekamMedisTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.RekamMedisTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.riwayatPenyakitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tindakanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tglresepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlahObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idRekamMedisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.klinikBersalinDataSet1 = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
             this.button4 = new System.Windows.Forms.Button();
+            this.idRekamMedisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlahObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tglresepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tindakanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.riwayatPenyakitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rekamMedisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
@@ -346,7 +346,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 75);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -359,73 +359,9 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1021, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(1125, 180);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idDokterDataGridViewTextBoxColumn
-            // 
-            this.idDokterDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDokterDataGridViewTextBoxColumn.DataPropertyName = "Id_Dokter";
-            this.idDokterDataGridViewTextBoxColumn.HeaderText = "Id_Dokter";
-            this.idDokterDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idDokterDataGridViewTextBoxColumn.Name = "idDokterDataGridViewTextBoxColumn";
-            // 
-            // idPasienDataGridViewTextBoxColumn
-            // 
-            this.idPasienDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idPasienDataGridViewTextBoxColumn.DataPropertyName = "Id_Pasien";
-            this.idPasienDataGridViewTextBoxColumn.HeaderText = "Id_Pasien";
-            this.idPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idPasienDataGridViewTextBoxColumn.Name = "idPasienDataGridViewTextBoxColumn";
-            // 
-            // idObatDataGridViewTextBoxColumn
-            // 
-            this.idObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idObatDataGridViewTextBoxColumn.DataPropertyName = "Id_Obat";
-            this.idObatDataGridViewTextBoxColumn.HeaderText = "Id_Obat";
-            this.idObatDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idObatDataGridViewTextBoxColumn.Name = "idObatDataGridViewTextBoxColumn";
-            // 
-            // riwayatPenyakitDataGridViewTextBoxColumn
-            // 
-            this.riwayatPenyakitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.riwayatPenyakitDataGridViewTextBoxColumn.DataPropertyName = "Riwayat_Penyakit";
-            this.riwayatPenyakitDataGridViewTextBoxColumn.HeaderText = "Riwayat_Penyakit";
-            this.riwayatPenyakitDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.riwayatPenyakitDataGridViewTextBoxColumn.Name = "riwayatPenyakitDataGridViewTextBoxColumn";
-            // 
-            // tindakanDataGridViewTextBoxColumn
-            // 
-            this.tindakanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tindakanDataGridViewTextBoxColumn.DataPropertyName = "Tindakan";
-            this.tindakanDataGridViewTextBoxColumn.HeaderText = "Tindakan";
-            this.tindakanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tindakanDataGridViewTextBoxColumn.Name = "tindakanDataGridViewTextBoxColumn";
-            // 
-            // tglresepDataGridViewTextBoxColumn
-            // 
-            this.tglresepDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tglresepDataGridViewTextBoxColumn.DataPropertyName = "Tgl_resep";
-            this.tglresepDataGridViewTextBoxColumn.HeaderText = "Tgl_resep";
-            this.tglresepDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tglresepDataGridViewTextBoxColumn.Name = "tglresepDataGridViewTextBoxColumn";
-            // 
-            // jumlahObatDataGridViewTextBoxColumn
-            // 
-            this.jumlahObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jumlahObatDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_Obat";
-            this.jumlahObatDataGridViewTextBoxColumn.HeaderText = "Jumlah_Obat";
-            this.jumlahObatDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.jumlahObatDataGridViewTextBoxColumn.Name = "jumlahObatDataGridViewTextBoxColumn";
-            // 
-            // idRekamMedisDataGridViewTextBoxColumn
-            // 
-            this.idRekamMedisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idRekamMedisDataGridViewTextBoxColumn.DataPropertyName = "Id_Rekam_Medis";
-            this.idRekamMedisDataGridViewTextBoxColumn.HeaderText = "Id_Rekam_Medis";
-            this.idRekamMedisDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idRekamMedisDataGridViewTextBoxColumn.Name = "idRekamMedisDataGridViewTextBoxColumn";
             // 
             // button2
             // 
@@ -464,6 +400,69 @@
             this.button4.TabIndex = 30;
             this.button4.Text = "Cetak Rekam Medis";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // idRekamMedisDataGridViewTextBoxColumn
+            // 
+            this.idRekamMedisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idRekamMedisDataGridViewTextBoxColumn.DataPropertyName = "Id_Rekam_Medis";
+            this.idRekamMedisDataGridViewTextBoxColumn.HeaderText = "Id_Rekam_Medis";
+            this.idRekamMedisDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idRekamMedisDataGridViewTextBoxColumn.Name = "idRekamMedisDataGridViewTextBoxColumn";
+            // 
+            // jumlahObatDataGridViewTextBoxColumn
+            // 
+            this.jumlahObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jumlahObatDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_Obat";
+            this.jumlahObatDataGridViewTextBoxColumn.HeaderText = "Jumlah_Obat";
+            this.jumlahObatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jumlahObatDataGridViewTextBoxColumn.Name = "jumlahObatDataGridViewTextBoxColumn";
+            // 
+            // tglresepDataGridViewTextBoxColumn
+            // 
+            this.tglresepDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tglresepDataGridViewTextBoxColumn.DataPropertyName = "Tgl_resep";
+            this.tglresepDataGridViewTextBoxColumn.HeaderText = "Tgl_resep";
+            this.tglresepDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.tglresepDataGridViewTextBoxColumn.Name = "tglresepDataGridViewTextBoxColumn";
+            // 
+            // tindakanDataGridViewTextBoxColumn
+            // 
+            this.tindakanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tindakanDataGridViewTextBoxColumn.DataPropertyName = "Tindakan";
+            this.tindakanDataGridViewTextBoxColumn.HeaderText = "Tindakan";
+            this.tindakanDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.tindakanDataGridViewTextBoxColumn.Name = "tindakanDataGridViewTextBoxColumn";
+            // 
+            // riwayatPenyakitDataGridViewTextBoxColumn
+            // 
+            this.riwayatPenyakitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.riwayatPenyakitDataGridViewTextBoxColumn.DataPropertyName = "Riwayat_Penyakit";
+            this.riwayatPenyakitDataGridViewTextBoxColumn.HeaderText = "Riwayat_Penyakit";
+            this.riwayatPenyakitDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.riwayatPenyakitDataGridViewTextBoxColumn.Name = "riwayatPenyakitDataGridViewTextBoxColumn";
+            // 
+            // idObatDataGridViewTextBoxColumn
+            // 
+            this.idObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idObatDataGridViewTextBoxColumn.DataPropertyName = "Id_Obat";
+            this.idObatDataGridViewTextBoxColumn.HeaderText = "Id_Obat";
+            this.idObatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idObatDataGridViewTextBoxColumn.Name = "idObatDataGridViewTextBoxColumn";
+            // 
+            // idPasienDataGridViewTextBoxColumn
+            // 
+            this.idPasienDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idPasienDataGridViewTextBoxColumn.DataPropertyName = "Id_Pasien";
+            this.idPasienDataGridViewTextBoxColumn.HeaderText = "Id_Pasien";
+            this.idPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idPasienDataGridViewTextBoxColumn.Name = "idPasienDataGridViewTextBoxColumn";
+            // 
+            // idDokterDataGridViewTextBoxColumn
+            // 
+            this.idDokterDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDokterDataGridViewTextBoxColumn.DataPropertyName = "Id_Dokter";
+            this.idDokterDataGridViewTextBoxColumn.HeaderText = "Id_Dokter";
+            this.idDokterDataGridViewTextBoxColumn.Name = "idDokterDataGridViewTextBoxColumn";
             // 
             // ADD_REKAM_MEDIS
             // 
@@ -519,6 +518,10 @@
         private System.Windows.Forms.BindingSource rekamMedisBindingSource;
         private KlinikBersalinDataSetTableAdapters.RekamMedisTableAdapter rekamMedisTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private KlinikBersalinDataSet klinikBersalinDataSet1;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPasienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idObatDataGridViewTextBoxColumn;
@@ -527,9 +530,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tglresepDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlahObatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idRekamMedisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private KlinikBersalinDataSet klinikBersalinDataSet1;
-        private System.Windows.Forms.Button button4;
     }
 }
