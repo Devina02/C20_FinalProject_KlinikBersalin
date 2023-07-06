@@ -36,5 +36,10 @@ namespace FinalProject_KlinikBersalin
         {
             new ADD_KAMAR().Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
