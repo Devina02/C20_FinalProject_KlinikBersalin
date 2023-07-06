@@ -23,5 +23,10 @@ namespace FinalProject_KlinikBersalin
             this.kamarTableAdapter.Fill(this.klinikBersalinDataSet.Kamar);
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
