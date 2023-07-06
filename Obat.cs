@@ -28,5 +28,10 @@ namespace FinalProject_KlinikBersalin
             this.obatTableAdapter.Fill(this.klinikBersalinDataSet.Obat);
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
