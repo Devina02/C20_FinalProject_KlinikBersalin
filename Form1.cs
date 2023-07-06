@@ -41,5 +41,10 @@ namespace FinalProject_KlinikBersalin
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ADD_REKAM_MEDIS().Show();
+        }
     }
 }
