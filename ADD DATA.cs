@@ -20,7 +20,7 @@ namespace FinalProject_KlinikBersalin
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            
+
         }
         private void dataGridView()
         {
@@ -35,11 +35,11 @@ namespace FinalProject_KlinikBersalin
 
         private void Refreshform()
         {
-        
+
             tbxNamaPasien.Text = "";
             tbxTelp.Text = "";
             tbxAlamat.Text = "";
-        
+
             button2.Enabled = false;
             button1.Enabled = false;
 
@@ -105,13 +105,13 @@ namespace FinalProject_KlinikBersalin
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-           //nmp.Enabled = true;
+            //nmp.Enabled = true;
             button2.Enabled = true;
             button3.Enabled = true;
         }

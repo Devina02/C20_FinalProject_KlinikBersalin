@@ -41,18 +41,18 @@
             this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbxHargaObat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxJenisObat = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxNamaObat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSimpan = new System.Windows.Forms.Button();
+            this.btnObat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.obatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -106,7 +106,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(826, 131);
+            this.dataGridView1.Size = new System.Drawing.Size(826, 212);
             this.dataGridView1.TabIndex = 35;
             // 
             // namaObatDataGridViewTextBoxColumn
@@ -155,26 +155,26 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.tbxHargaObat);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.tbxJenisObat);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbxNamaObat);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(165, 232);
+            this.panel1.Location = new System.Drawing.Point(165, 306);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 200);
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox6
+            // tbxHargaObat
             // 
-            this.textBox6.Location = new System.Drawing.Point(311, 154);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(215, 26);
-            this.textBox6.TabIndex = 10;
+            this.tbxHargaObat.Location = new System.Drawing.Point(311, 154);
+            this.tbxHargaObat.Name = "tbxHargaObat";
+            this.tbxHargaObat.Size = new System.Drawing.Size(215, 26);
+            this.tbxHargaObat.TabIndex = 10;
             // 
             // label8
             // 
@@ -187,12 +187,12 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Harga Obat";
             // 
-            // textBox3
+            // tbxJenisObat
             // 
-            this.textBox3.Location = new System.Drawing.Point(22, 154);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 26);
-            this.textBox3.TabIndex = 6;
+            this.tbxJenisObat.Location = new System.Drawing.Point(22, 154);
+            this.tbxJenisObat.Name = "tbxJenisObat";
+            this.tbxJenisObat.Size = new System.Drawing.Size(215, 26);
+            this.tbxJenisObat.TabIndex = 6;
             // 
             // textBox2
             // 
@@ -201,12 +201,12 @@
             this.textBox2.Size = new System.Drawing.Size(215, 26);
             this.textBox2.TabIndex = 5;
             // 
-            // textBox1
+            // tbxNamaObat
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 26);
-            this.textBox1.TabIndex = 4;
+            this.tbxNamaObat.Location = new System.Drawing.Point(23, 65);
+            this.tbxNamaObat.Name = "tbxNamaObat";
+            this.tbxNamaObat.Size = new System.Drawing.Size(215, 26);
+            this.tbxNamaObat.TabIndex = 4;
             // 
             // label3
             // 
@@ -245,53 +245,54 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(365, 247);
+            this.label2.Location = new System.Drawing.Point(365, 316);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 32;
             // 
-            // button1
+            // btnClear
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(578, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 60);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Clear Data";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.Location = new System.Drawing.Point(578, 523);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(157, 60);
+            this.btnClear.TabIndex = 38;
+            this.btnClear.Text = "Clear Data";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnSimpan
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(359, 454);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 60);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Simpan Data";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSimpan.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSimpan.Location = new System.Drawing.Point(359, 523);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(157, 60);
+            this.btnSimpan.TabIndex = 36;
+            this.btnSimpan.Text = "Simpan Data";
+            this.btnSimpan.UseVisualStyleBackColor = false;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
-            // button3
+            // btnObat
             // 
-            this.button3.BackColor = System.Drawing.Color.SlateGray;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(147, 454);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 60);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Add Data";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnObat.BackColor = System.Drawing.Color.SlateGray;
+            this.btnObat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnObat.Location = new System.Drawing.Point(147, 523);
+            this.btnObat.Name = "btnObat";
+            this.btnObat.Size = new System.Drawing.Size(157, 60);
+            this.btnObat.TabIndex = 37;
+            this.btnObat.Text = "Add Data";
+            this.btnObat.UseVisualStyleBackColor = false;
             // 
             // Obat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(905, 547);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(905, 622);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSimpan);
+            this.Controls.Add(this.btnObat);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -322,17 +323,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPasienDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxJenisObat;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxNamaObat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSimpan;
+        private System.Windows.Forms.Button btnObat;
+        private System.Windows.Forms.TextBox tbxHargaObat;
         private System.Windows.Forms.Label label8;
     }
 }
