@@ -35,9 +35,11 @@ namespace FinalProject_KlinikBersalin
 
         private void Refreshform()
         {
-            tbxIdPasien.Text = "";
+        
             tbxNamaPasien.Text = "";
-            tbxIdPasien.Enabled = false;
+            tbxTelp.Text = "";
+            tbxAlamat.Text = "";
+        
             button2.Enabled = false;
             button1.Enabled = false;
 
@@ -62,27 +64,39 @@ namespace FinalProject_KlinikBersalin
         private void button2_Click(object sender, EventArgs e)
         {
             string nmPasien = tbxNamaPasien.Text;
-            string idPasien = tbxIdPasien.Text;
             string noTelp = tbxTelp.Text;
             string alamt = tbxAlamat.Text;
+
             if (nmPasien == "")
             {
                 MessageBox.Show("Masukan nama Pasien", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (idPasien == "")
-            {
-                MessageBox.Show("Masukan Id Pasien", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
             else
             {
                 koneksi.Open();
-                string str = "Insert into dbo.Pasien (Nama_Pasien, Id_Pasien, No_Telp, alamat)" + "values(@Nama_Pasien, @Id_Pasien, @No_Telp, @alamat)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
+
+                // Mendapatkan id terakhir yang ada di tabel Pasien
+                string getIdQuery = "SELECT MAX(Id_Pasien) FROM dbo.Pasien";
+                SqlCommand getIdCmd = new SqlCommand(getIdQuery, koneksi);
+                object result = getIdCmd.ExecuteScalar();
+                string newId = "P0001";
+
+                // Jika id terakhir ada, tambahkan 1 untuk mendapatkan id baru
+                if (result != null && result != DBNull.Value)
+                {
+                    string lastId = Convert.ToString(result);
+                    int lastNumber = int.Parse(lastId.Substring(1));
+                    newId = "P" + (lastNumber + 1).ToString("D4");
+                }
+
+                // Query untuk menyimpan data baru
+                string insertQuery = "INSERT INTO dbo.Pasien (Nama_Pasien, Id_Pasien, No_Telp, alamat) VALUES (@Nama_Pasien, @Id_Pasien, @No_Telp, @alamat)";
+                SqlCommand cmd = new SqlCommand(insertQuery, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("Nama_Pasien",nmPasien));
-                cmd.Parameters.Add(new SqlParameter("Id_Pasien", idPasien));
-                cmd.Parameters.Add(new SqlParameter("No_Telp", noTelp));
-                cmd.Parameters.Add(new SqlParameter("Alamat", alamt));
+                cmd.Parameters.Add(new SqlParameter("@Nama_Pasien", nmPasien));
+                cmd.Parameters.Add(new SqlParameter("@Id_Pasien", newId));
+                cmd.Parameters.Add(new SqlParameter("@No_Telp", noTelp));
+                cmd.Parameters.Add(new SqlParameter("@Alamat", alamt));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -90,6 +104,7 @@ namespace FinalProject_KlinikBersalin
                 dataGridView();
                 Refreshform();
             }
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -112,7 +127,7 @@ namespace FinalProject_KlinikBersalin
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Refreshform();
         }
     }
 }
