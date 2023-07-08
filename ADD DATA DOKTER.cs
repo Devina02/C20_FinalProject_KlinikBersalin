@@ -89,7 +89,7 @@ namespace FinalProject_KlinikBersalin
                 {
                     string lastId = Convert.ToString(result);
                     int lastNumber = int.Parse(lastId.Substring(1));
-                    newId = "D" + (lastNumber + 1).ToString("D4");
+                    newId = "D" + (lastNumber + 1).ToString("D3");
                 }
 
                 string insertQuery = "INSERT INTO dbo.Dokter (Nama_Dokter, Id_Dokter, Email_dokter) VALUES (@Nama_Dokter, @Id_Dokter, @Email_dokter)";
