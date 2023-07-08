@@ -35,12 +35,9 @@
             this.dokterTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.DokterTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tbxnama = new System.Windows.Forms.TextBox();
-            this.tbxiddokter = new System.Windows.Forms.TextBox();
             this.tbxemail = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,6 +46,7 @@
             this.namaDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emaildokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dokterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,17 +95,6 @@
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 1;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(629, 387);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 60);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Clear Data";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -118,17 +105,6 @@
             this.label11.Size = new System.Drawing.Size(141, 26);
             this.label11.TabIndex = 0;
             this.label11.Text = "Nama Dokter";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(14, 169);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 26);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Id Dokter";
             // 
             // label9
             // 
@@ -148,13 +124,6 @@
             this.tbxnama.Size = new System.Drawing.Size(514, 26);
             this.tbxnama.TabIndex = 4;
             // 
-            // tbxiddokter
-            // 
-            this.tbxiddokter.Location = new System.Drawing.Point(19, 204);
-            this.tbxiddokter.Name = "tbxiddokter";
-            this.tbxiddokter.Size = new System.Drawing.Size(516, 26);
-            this.tbxiddokter.TabIndex = 5;
-            // 
             // tbxemail
             // 
             this.tbxemail.Location = new System.Drawing.Point(20, 125);
@@ -167,21 +136,19 @@
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.SlateGray;
             this.panel2.Controls.Add(this.tbxemail);
-            this.panel2.Controls.Add(this.tbxiddokter);
             this.panel2.Controls.Add(this.tbxnama);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(54, 250);
+            this.panel2.Location = new System.Drawing.Point(54, 314);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(555, 264);
+            this.panel2.Size = new System.Drawing.Size(555, 171);
             this.panel2.TabIndex = 15;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(629, 321);
+            this.button4.Location = new System.Drawing.Point(629, 370);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(157, 60);
             this.button4.TabIndex = 16;
@@ -193,7 +160,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.SlateGray;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(629, 256);
+            this.button3.Location = new System.Drawing.Point(629, 305);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 60);
             this.button3.TabIndex = 18;
@@ -221,7 +188,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 133);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(732, 181);
             this.dataGridView1.TabIndex = 20;
             // 
             // namaDokterDataGridViewTextBoxColumn
@@ -244,6 +212,18 @@
             this.emaildokterDataGridViewTextBoxColumn.HeaderText = "Email_dokter";
             this.emaildokterDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.emaildokterDataGridViewTextBoxColumn.Name = "emaildokterDataGridViewTextBoxColumn";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(629, 436);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 60);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Clear Data";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ADD_DATA_DOKTER
             // 
@@ -280,12 +260,9 @@
         private KlinikBersalinDataSetTableAdapters.DokterTableAdapter dokterTableAdapter;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbxnama;
-        private System.Windows.Forms.TextBox tbxiddokter;
         private System.Windows.Forms.TextBox tbxemail;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button4;
@@ -294,5 +271,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emaildokterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
     }
 }

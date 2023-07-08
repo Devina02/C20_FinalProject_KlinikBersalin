@@ -74,14 +74,11 @@ namespace FinalProject_KlinikBersalin
             else
             {
                 koneksi.Open();
-
-                // Mendapatkan id terakhir yang ada di tabel Pasien
                 string getIdQuery = "SELECT MAX(Id_Pasien) FROM dbo.Pasien";
                 SqlCommand getIdCmd = new SqlCommand(getIdQuery, koneksi);
                 object result = getIdCmd.ExecuteScalar();
                 string newId = "P0001";
 
-                // Jika id terakhir ada, tambahkan 1 untuk mendapatkan id baru
                 if (result != null && result != DBNull.Value)
                 {
                     string lastId = Convert.ToString(result);
@@ -89,7 +86,6 @@ namespace FinalProject_KlinikBersalin
                     newId = "P" + (lastNumber + 1).ToString("D4");
                 }
 
-                // Query untuk menyimpan data baru
                 string insertQuery = "INSERT INTO dbo.Pasien (Nama_Pasien, Id_Pasien, No_Telp, alamat) VALUES (@Nama_Pasien, @Id_Pasien, @No_Telp, @alamat)";
                 SqlCommand cmd = new SqlCommand(insertQuery, koneksi);
                 cmd.CommandType = CommandType.Text;

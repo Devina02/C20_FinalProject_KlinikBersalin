@@ -52,9 +52,10 @@ namespace FinalProject_KlinikBersalin
 
         private void Refreshform()
         {
-            tbxiddokter.Text = "";
+
+ 
             tbxnama.Text = "";
-            tbxiddokter.Enabled = false;
+            tbxemail.Text = "";
             button2.Enabled = false;
             button4.Enabled = false;
 
@@ -64,32 +65,39 @@ namespace FinalProject_KlinikBersalin
         {
             //nmp.Enabled = true;
             button2.Enabled = true;
-            button3.Enabled = true;
+            button4.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             string namadokter = tbxnama.Text;
-            string iddokter = tbxiddokter.Text;
             string email = tbxemail.Text;
+
             if (namadokter == "")
             {
-                MessageBox.Show("Masukan nama Pasien", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (iddokter == "")
-            {
-                MessageBox.Show("Masukan Id Pasien", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukan nama Dokter", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string str = "Insert into dbo.Pasien (Nama_Dokter, Id_Dokter, Email_dokter)" + "values(@Nama_Dokter, @Id_Dokter, @Email_dokter)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
+                string getIdQuery = "SELECT MAX(Id_Dokter) FROM dbo.Dokter";
+                SqlCommand getIdCmd = new SqlCommand(getIdQuery, koneksi);
+                object result = getIdCmd.ExecuteScalar();
+                string newId = "D001";
+
+                if (result != null && result != DBNull.Value)
+                {
+                    string lastId = Convert.ToString(result);
+                    int lastNumber = int.Parse(lastId.Substring(1));
+                    newId = "D" + (lastNumber + 1).ToString("D4");
+                }
+
+                string insertQuery = "INSERT INTO dbo.Dokter (Nama_Dokter, Id_Dokter, Email_dokter) VALUES (@Nama_Dokter, @Id_Dokter, @Email_dokter)";
+                SqlCommand cmd = new SqlCommand(insertQuery, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("Nama_Dokter", namadokter));
-                cmd.Parameters.Add(new SqlParameter("Id_Dokter", iddokter));
-                cmd.Parameters.Add(new SqlParameter("Email_dokter", email));
+                cmd.Parameters.Add(new SqlParameter("@Nama_Dokter", namadokter));
+                cmd.Parameters.Add(new SqlParameter("@Email_dokter", email));
+                cmd.Parameters.Add(new SqlParameter("@Id_Dokter", newId));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -98,5 +106,11 @@ namespace FinalProject_KlinikBersalin
                 Refreshform();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Refreshform();
+        }
     }
+   
 }
