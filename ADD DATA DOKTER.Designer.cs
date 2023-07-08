@@ -39,9 +39,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbxnama = new System.Windows.Forms.TextBox();
+            this.tbxiddokter = new System.Windows.Forms.TextBox();
+            this.tbxemail = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -141,38 +141,38 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Email";
             // 
-            // textBox7
+            // tbxnama
             // 
-            this.textBox7.Location = new System.Drawing.Point(21, 48);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(514, 26);
-            this.textBox7.TabIndex = 4;
+            this.tbxnama.Location = new System.Drawing.Point(21, 48);
+            this.tbxnama.Name = "tbxnama";
+            this.tbxnama.Size = new System.Drawing.Size(514, 26);
+            this.tbxnama.TabIndex = 4;
             // 
-            // textBox6
+            // tbxiddokter
             // 
-            this.textBox6.Location = new System.Drawing.Point(19, 204);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(516, 26);
-            this.textBox6.TabIndex = 5;
+            this.tbxiddokter.Location = new System.Drawing.Point(19, 204);
+            this.tbxiddokter.Name = "tbxiddokter";
+            this.tbxiddokter.Size = new System.Drawing.Size(516, 26);
+            this.tbxiddokter.TabIndex = 5;
             // 
-            // textBox5
+            // tbxemail
             // 
-            this.textBox5.Location = new System.Drawing.Point(20, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(515, 26);
-            this.textBox5.TabIndex = 6;
+            this.tbxemail.Location = new System.Drawing.Point(20, 125);
+            this.tbxemail.Name = "tbxemail";
+            this.tbxemail.Size = new System.Drawing.Size(515, 26);
+            this.tbxemail.TabIndex = 6;
             // 
             // panel2
             // 
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.tbxemail);
+            this.panel2.Controls.Add(this.tbxiddokter);
+            this.panel2.Controls.Add(this.tbxnama);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(54, 214);
+            this.panel2.Location = new System.Drawing.Point(54, 250);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(555, 264);
             this.panel2.TabIndex = 15;
@@ -187,6 +187,7 @@
             this.button4.TabIndex = 16;
             this.button4.Text = "Simpan Data";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -198,6 +199,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Add Data";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -219,7 +221,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 87);
+            this.dataGridView1.Size = new System.Drawing.Size(732, 133);
             this.dataGridView1.TabIndex = 20;
             // 
             // namaDokterDataGridViewTextBoxColumn
@@ -282,9 +284,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbxnama;
+        private System.Windows.Forms.TextBox tbxiddokter;
+        private System.Windows.Forms.TextBox tbxemail;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
