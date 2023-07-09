@@ -16,3 +16,4 @@ C:\Users\Lenovo\source\repos\FinalProject_KlinikBersalin\obj\Debug\FinalProject_
 C:\Users\Lenovo\source\repos\FinalProject_KlinikBersalin\obj\Debug\FinalProject_KlinikBersalin.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\source\repos\FinalProject_KlinikBersalin\obj\Debug\FinalProject_KlinikBersalin.exe
 C:\Users\Lenovo\source\repos\FinalProject_KlinikBersalin\obj\Debug\FinalProject_KlinikBersalin.pdb
+C:\Users\Lenovo\source\repos\FinalProject_KlinikBersalin\obj\Debug\FinalProject_KlinikBersalin.Add_Shift.resources
