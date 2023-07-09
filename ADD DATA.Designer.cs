@@ -46,13 +46,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pasienTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.PasienTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.namaPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noTelpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noTelpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbxpasien = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pasienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             this.panel1.SuspendLayout();
@@ -97,7 +106,7 @@
             this.tbxNamaPasien.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pasienBindingSource, "Nama_Pasien", true));
             this.tbxNamaPasien.Location = new System.Drawing.Point(24, 50);
             this.tbxNamaPasien.Name = "tbxNamaPasien";
-            this.tbxNamaPasien.Size = new System.Drawing.Size(556, 26);
+            this.tbxNamaPasien.Size = new System.Drawing.Size(217, 26);
             this.tbxNamaPasien.TabIndex = 4;
             this.tbxNamaPasien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -116,7 +125,7 @@
             this.tbxTelp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pasienBindingSource, "No_Telp", true));
             this.tbxTelp.Location = new System.Drawing.Point(24, 218);
             this.tbxTelp.Name = "tbxTelp";
-            this.tbxTelp.Size = new System.Drawing.Size(556, 26);
+            this.tbxTelp.Size = new System.Drawing.Size(217, 26);
             this.tbxTelp.TabIndex = 5;
             // 
             // tbxAlamat
@@ -124,14 +133,14 @@
             this.tbxAlamat.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pasienBindingSource, "Alamat", true));
             this.tbxAlamat.Location = new System.Drawing.Point(22, 134);
             this.tbxAlamat.Name = "tbxAlamat";
-            this.tbxAlamat.Size = new System.Drawing.Size(558, 26);
+            this.tbxAlamat.Size = new System.Drawing.Size(219, 26);
             this.tbxAlamat.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 22);
+            this.label5.Location = new System.Drawing.Point(188, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(224, 45);
             this.label5.TabIndex = 8;
@@ -148,9 +157,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(75, 340);
+            this.panel1.Location = new System.Drawing.Point(196, 288);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 271);
+            this.panel1.Size = new System.Drawing.Size(292, 261);
             this.panel1.TabIndex = 9;
             // 
             // pasienTableAdapter
@@ -159,15 +168,43 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
+            this.button2.BackColor = System.Drawing.Color.SlateGray;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(694, 440);
+            this.button2.Location = new System.Drawing.Point(638, 303);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 60);
+            this.button2.Size = new System.Drawing.Size(123, 61);
             this.button2.TabIndex = 10;
             this.button2.Text = "Simpan Data";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            // 
+            // noTelpDataGridViewTextBoxColumn
+            // 
+            this.noTelpDataGridViewTextBoxColumn.DataPropertyName = "No_Telp";
+            this.noTelpDataGridViewTextBoxColumn.HeaderText = "No_Telp";
+            this.noTelpDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.noTelpDataGridViewTextBoxColumn.Name = "noTelpDataGridViewTextBoxColumn";
+            // 
+            // idPasienDataGridViewTextBoxColumn
+            // 
+            this.idPasienDataGridViewTextBoxColumn.DataPropertyName = "Id_Pasien";
+            this.idPasienDataGridViewTextBoxColumn.HeaderText = "Id_Pasien";
+            this.idPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idPasienDataGridViewTextBoxColumn.Name = "idPasienDataGridViewTextBoxColumn";
+            // 
+            // namaPasienDataGridViewTextBoxColumn
+            // 
+            this.namaPasienDataGridViewTextBoxColumn.DataPropertyName = "Nama_Pasien";
+            this.namaPasienDataGridViewTextBoxColumn.HeaderText = "Nama_Pasien";
+            this.namaPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.namaPasienDataGridViewTextBoxColumn.Name = "namaPasienDataGridViewTextBoxColumn";
             // 
             // dataGridView1
             // 
@@ -208,7 +245,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuText;
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridView1.Location = new System.Drawing.Point(75, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(196, 63);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
@@ -223,69 +260,148 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 212);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // namaPasienDataGridViewTextBoxColumn
-            // 
-            this.namaPasienDataGridViewTextBoxColumn.DataPropertyName = "Nama_Pasien";
-            this.namaPasienDataGridViewTextBoxColumn.HeaderText = "Nama_Pasien";
-            this.namaPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.namaPasienDataGridViewTextBoxColumn.Name = "namaPasienDataGridViewTextBoxColumn";
-            // 
-            // idPasienDataGridViewTextBoxColumn
-            // 
-            this.idPasienDataGridViewTextBoxColumn.DataPropertyName = "Id_Pasien";
-            this.idPasienDataGridViewTextBoxColumn.HeaderText = "Id_Pasien";
-            this.idPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idPasienDataGridViewTextBoxColumn.Name = "idPasienDataGridViewTextBoxColumn";
-            // 
-            // noTelpDataGridViewTextBoxColumn
-            // 
-            this.noTelpDataGridViewTextBoxColumn.DataPropertyName = "No_Telp";
-            this.noTelpDataGridViewTextBoxColumn.HeaderText = "No_Telp";
-            this.noTelpDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.noTelpDataGridViewTextBoxColumn.Name = "noTelpDataGridViewTextBoxColumn";
-            // 
-            // alamatDataGridViewTextBoxColumn
-            // 
-            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SlateGray;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(694, 375);
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(508, 304);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 60);
+            this.button3.Size = new System.Drawing.Size(124, 60);
             this.button3.TabIndex = 12;
             this.button3.Text = "Add Data";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DimGray;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(638, 415);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 54);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(521, 410);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 27);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Id_Pasien";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
+            // 
+            // txbxpasien
+            // 
+            this.txbxpasien.Location = new System.Drawing.Point(521, 443);
+            this.txbxpasien.Name = "txbxpasien";
+            this.txbxpasien.Size = new System.Drawing.Size(100, 26);
+            this.txbxpasien.TabIndex = 18;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Gray;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(18, 377);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(140, 63);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "Obat";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(18, 459);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 65);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Rekam Medis";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(694, 506);
+            this.button1.Location = new System.Drawing.Point(17, 289);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 60);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Clear Data";
+            this.button1.Size = new System.Drawing.Size(141, 65);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Kamar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(18, 201);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(140, 67);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "Petugas";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.RosyBrown;
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.Location = new System.Drawing.Point(17, 115);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(141, 66);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Dokter";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.SlateGray;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.Location = new System.Drawing.Point(17, 28);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(141, 64);
+            this.button9.TabIndex = 19;
+            this.button9.Text = "Pasien";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.SlateGray;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.Location = new System.Drawing.Point(766, 303);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(111, 61);
+            this.btnClear.TabIndex = 32;
+            this.btnClear.Text = "Clear Data";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ADD_DATA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(920, 650);
+            this.ClientSize = new System.Drawing.Size(957, 568);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.txbxpasien);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -318,12 +434,21 @@
         private System.Windows.Forms.BindingSource pasienBindingSource;
         private KlinikBersalinDataSetTableAdapters.PasienTableAdapter pasienTableAdapter;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noTelpDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPasienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaPasienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbxpasien;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaPasienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPasienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noTelpDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnClear;
     }
 }

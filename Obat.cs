@@ -14,7 +14,7 @@ namespace FinalProject_KlinikBersalin
     public partial class Obat : Form
     {
         private string stringConnection = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
-      "database=KlinikBersalin;User ID=sa;Password=123";
+            "database=KlinikBersalin;User ID=sa;Password=123";
         private SqlConnection koneksi;
         public Obat()
         {
@@ -89,13 +89,14 @@ namespace FinalProject_KlinikBersalin
                     int lastNumber = int.Parse(lastId.Substring(1));
                     newId = "B" + (lastNumber + 1).ToString("D3");
                 }
-                string insertQuery = "INSERT INTO dbo.Kamar (Nama_Obat, Id_Obat, Harga_Obat, Jenis_Obat) VALUES (@Nama_Obat, @Id_Obat, @Harga_Obat, @Jenis_Obat)";
+                string insertQuery = "INSERT INTO dbo.Obat (Nama_Obat, Id_Obat, Harga_Obat, Jenis_Obat) VALUES (@Nama_Obat, @Id_Obat, @Harga_Obat, @Jenis_Obat)";
                 SqlCommand cmd = new SqlCommand(insertQuery, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@Nama_Obat", nmObat));
                 cmd.Parameters.Add(new SqlParameter("@Id_Obat", newId));
                 cmd.Parameters.Add(new SqlParameter("@Jenis_Obat", JnsObat));
                 cmd.Parameters.Add(new SqlParameter("@Harga_Obat", HargaObat));
+
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -103,6 +104,12 @@ namespace FinalProject_KlinikBersalin
                 dataGridView();
                 Refreshform();
             }
+        }
+
+        private void btnObat_Click(object sender, EventArgs e)
+        {
+            btnSimpan.Enabled = true;
+            btnObat.Enabled = true;
         }
     }
 }

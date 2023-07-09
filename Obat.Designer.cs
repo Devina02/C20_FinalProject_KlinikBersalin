@@ -53,6 +53,15 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnObat = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.txbxpasien = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.obatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,7 +72,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 25);
+            this.label7.Location = new System.Drawing.Point(260, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 45);
             this.label7.TabIndex = 16;
@@ -102,11 +111,11 @@
             this.dataGridView1.DataSource = this.obatBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuText;
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(261, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(826, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 198);
             this.dataGridView1.TabIndex = 35;
             // 
             // namaObatDataGridViewTextBoxColumn
@@ -163,7 +172,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(165, 306);
+            this.panel1.Location = new System.Drawing.Point(261, 282);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 200);
             this.panel1.TabIndex = 33;
@@ -254,7 +263,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.SteelBlue;
             this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClear.Location = new System.Drawing.Point(578, 523);
+            this.btnClear.Location = new System.Drawing.Point(852, 436);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(157, 60);
             this.btnClear.TabIndex = 38;
@@ -265,7 +274,7 @@
             // 
             this.btnSimpan.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSimpan.Location = new System.Drawing.Point(359, 523);
+            this.btnSimpan.Location = new System.Drawing.Point(852, 367);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(157, 60);
             this.btnSimpan.TabIndex = 36;
@@ -277,19 +286,125 @@
             // 
             this.btnObat.BackColor = System.Drawing.Color.SlateGray;
             this.btnObat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnObat.Location = new System.Drawing.Point(147, 523);
+            this.btnObat.Location = new System.Drawing.Point(852, 297);
             this.btnObat.Name = "btnObat";
             this.btnObat.Size = new System.Drawing.Size(157, 60);
             this.btnObat.TabIndex = 37;
             this.btnObat.Text = "Add Data";
             this.btnObat.UseVisualStyleBackColor = false;
+            this.btnObat.Click += new System.EventHandler(this.btnObat_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Gray;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(25, 399);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(140, 63);
+            this.button6.TabIndex = 51;
+            this.button6.Text = "Obat";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(25, 481);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 65);
+            this.button5.TabIndex = 50;
+            this.button5.Text = "Rekam Medis";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.CadetBlue;
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(24, 311);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(141, 65);
+            this.button7.TabIndex = 49;
+            this.button7.Text = "Kamar";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.Location = new System.Drawing.Point(25, 223);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(140, 67);
+            this.button8.TabIndex = 48;
+            this.button8.Text = "Petugas";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.RosyBrown;
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.Location = new System.Drawing.Point(24, 137);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(141, 66);
+            this.button9.TabIndex = 47;
+            this.button9.Text = "Dokter";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.SlateGray;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button10.Location = new System.Drawing.Point(24, 50);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(141, 64);
+            this.button10.TabIndex = 46;
+            this.button10.Text = "Pasien";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // txbxpasien
+            // 
+            this.txbxpasien.Location = new System.Drawing.Point(432, 559);
+            this.txbxpasien.Name = "txbxpasien";
+            this.txbxpasien.Size = new System.Drawing.Size(100, 26);
+            this.txbxpasien.TabIndex = 54;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(432, 526);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 27);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Id_Pasien";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(549, 531);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 54);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Obat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(905, 622);
+            this.ClientSize = new System.Drawing.Size(1021, 622);
+            this.Controls.Add(this.txbxpasien);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnObat);
@@ -335,5 +450,14 @@
         private System.Windows.Forms.Button btnObat;
         private System.Windows.Forms.TextBox tbxHargaObat;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox txbxpasien;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

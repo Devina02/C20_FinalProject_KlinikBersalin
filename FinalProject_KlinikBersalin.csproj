@@ -70,6 +70,12 @@
     <Compile Include="ADD REKAM MEDIS.Designer.cs">
       <DependentUpon>ADD REKAM MEDIS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Shift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Shift.Designer.cs">
+      <DependentUpon>Add Shift.cs</DependentUpon>
+    </Compile>
     <Compile Include="ADD_KAMAR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADD REKAM MEDIS.resx">
       <DependentUpon>ADD REKAM MEDIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Shift.resx">
+      <DependentUpon>Add Shift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADD_KAMAR.resx">
       <DependentUpon>ADD_KAMAR.cs</DependentUpon>

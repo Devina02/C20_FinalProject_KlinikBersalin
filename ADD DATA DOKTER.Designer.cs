@@ -47,6 +47,15 @@
             this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emaildokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.txbxpasien = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dokterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -57,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 88);
+            this.label1.Location = new System.Drawing.Point(410, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 37);
             this.label1.TabIndex = 0;
@@ -81,7 +90,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 43);
+            this.label7.Location = new System.Drawing.Point(235, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(239, 45);
             this.label7.TabIndex = 11;
@@ -90,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(424, 254);
+            this.label2.Location = new System.Drawing.Point(609, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 1;
@@ -139,7 +148,7 @@
             this.panel2.Controls.Add(this.tbxnama);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(54, 314);
+            this.panel2.Location = new System.Drawing.Point(243, 277);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(555, 171);
             this.panel2.TabIndex = 15;
@@ -148,7 +157,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(629, 370);
+            this.button4.Location = new System.Drawing.Point(814, 329);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(157, 60);
             this.button4.TabIndex = 16;
@@ -160,7 +169,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.SlateGray;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(629, 305);
+            this.button3.Location = new System.Drawing.Point(814, 264);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 60);
             this.button3.TabIndex = 18;
@@ -184,7 +193,7 @@
             this.dataGridView1.DataSource = this.dokterBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuText;
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 106);
+            this.dataGridView1.Location = new System.Drawing.Point(230, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -217,7 +226,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SteelBlue;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(629, 436);
+            this.button2.Location = new System.Drawing.Point(814, 395);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 60);
             this.button2.TabIndex = 19;
@@ -225,12 +234,117 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Gray;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(27, 390);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(140, 63);
+            this.button6.TabIndex = 45;
+            this.button6.Text = "Obat";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(27, 472);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 65);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "Rekam Medis";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(26, 302);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 65);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Kamar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(27, 214);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(140, 67);
+            this.button7.TabIndex = 42;
+            this.button7.Text = "Petugas";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.RosyBrown;
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.Location = new System.Drawing.Point(26, 128);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(141, 66);
+            this.button8.TabIndex = 41;
+            this.button8.Text = "Dokter";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.SlateGray;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.Location = new System.Drawing.Point(26, 41);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(141, 64);
+            this.button9.TabIndex = 40;
+            this.button9.Text = "Pasien";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // txbxpasien
+            // 
+            this.txbxpasien.Location = new System.Drawing.Point(412, 501);
+            this.txbxpasien.Name = "txbxpasien";
+            this.txbxpasien.Size = new System.Drawing.Size(100, 26);
+            this.txbxpasien.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(412, 468);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 27);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Id_Pasien";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.DimGray;
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button10.Location = new System.Drawing.Point(529, 473);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(107, 54);
+            this.button10.TabIndex = 55;
+            this.button10.Text = "Delete";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // ADD_DATA_DOKTER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(845, 516);
+            this.ClientSize = new System.Drawing.Size(1013, 557);
+            this.Controls.Add(this.txbxpasien);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -272,5 +386,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emaildokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox txbxpasien;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button10;
     }
 }

@@ -14,7 +14,7 @@ namespace FinalProject_KlinikBersalin
     public partial class ADD_DATA : Form
     {
         private string stringConnection = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
-       "database=KlinikBersalin;User ID=sa;Password=123";
+          "database=KlinikBersalin;User ID=sa;Password=123";
         private SqlConnection koneksi;
         public ADD_DATA()
         {
@@ -41,7 +41,6 @@ namespace FinalProject_KlinikBersalin
             tbxAlamat.Text = "";
 
             button2.Enabled = false;
-            button1.Enabled = false;
 
         }
         private void label5_Click(object sender, EventArgs e)
@@ -121,7 +120,52 @@ namespace FinalProject_KlinikBersalin
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnObat_Click(object sender, EventArgs e)
+        {
+            new Obat().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string stringConnection = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
+             "database=KlinikBersalin;User ID=sa;Password=123";
+            string query = "DELETE FROM Pasien WHERE Id_Pasien = @Id_Pasien";
+            using (SqlConnection koneksi = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, koneksi))
+                {
+                    cmd.Parameters.AddWithValue("@Id_Pasien", txbxpasien.Text);
+
+                    try
+                    {
+                        koneksi.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data successfully deleted.");
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+
+        }
+
+        private void tbxSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
             Refreshform();
         }
