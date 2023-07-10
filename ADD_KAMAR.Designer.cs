@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kamarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klinikBersalinDataSet = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,9 +42,9 @@
             this.pasienTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.PasienTableAdapter();
             this.btnadd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tbxidkamar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tbxhargakamar = new System.Windows.Forms.TextBox();
             this.tbxjeniskmr = new System.Windows.Forms.TextBox();
             this.tbxnmkamar = new System.Windows.Forms.TextBox();
@@ -64,9 +64,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.txbxpasien = new System.Windows.Forms.TextBox();
+            this.txbxIDKamar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kamarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pasienBindingSource)).BeginInit();
@@ -112,7 +113,7 @@
             // 
             this.btnclear.BackColor = System.Drawing.Color.SteelBlue;
             this.btnclear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnclear.Location = new System.Drawing.Point(334, 515);
+            this.btnclear.Location = new System.Drawing.Point(614, 456);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(141, 50);
             this.btnclear.TabIndex = 26;
@@ -134,7 +135,7 @@
             // 
             this.btnsimpan.BackColor = System.Drawing.Color.RosyBrown;
             this.btnsimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsimpan.Location = new System.Drawing.Point(334, 460);
+            this.btnsimpan.Location = new System.Drawing.Point(400, 456);
             this.btnsimpan.Name = "btnsimpan";
             this.btnsimpan.Size = new System.Drawing.Size(141, 49);
             this.btnsimpan.TabIndex = 23;
@@ -150,7 +151,7 @@
             // 
             this.btnadd.BackColor = System.Drawing.Color.SlateGray;
             this.btnadd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnadd.Location = new System.Drawing.Point(334, 407);
+            this.btnadd.Location = new System.Drawing.Point(186, 456);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(141, 47);
             this.btnadd.TabIndex = 25;
@@ -162,9 +163,9 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.tbxidkamar);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.tbxhargakamar);
             this.panel1.Controls.Add(this.tbxjeniskmr);
             this.panel1.Controls.Add(this.tbxnmkamar);
@@ -176,6 +177,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(840, 111);
             this.panel1.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(695, 41);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tbxidkamar
             // 
@@ -196,14 +206,6 @@
             this.label6.Size = new System.Drawing.Size(101, 26);
             this.label6.TabIndex = 8;
             this.label6.Text = "Id Kamar";
-            // 
-            // textBox4
-            // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pasienBindingSource, "Id_Pasien", true));
-            this.textBox4.Location = new System.Drawing.Point(684, 44);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(143, 26);
-            this.textBox4.TabIndex = 7;
             // 
             // tbxhargakamar
             // 
@@ -277,14 +279,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.namaKamarDataGridViewTextBoxColumn,
@@ -366,6 +368,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.CadetBlue;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.Location = new System.Drawing.Point(12, 304);
             this.button7.Name = "button7";
@@ -408,42 +411,56 @@
             this.button10.Text = "Pasien";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // txbxpasien
+            // txbxIDKamar
             // 
-            this.txbxpasien.Location = new System.Drawing.Point(546, 483);
-            this.txbxpasien.Name = "txbxpasien";
-            this.txbxpasien.Size = new System.Drawing.Size(100, 26);
-            this.txbxpasien.TabIndex = 54;
+            this.txbxIDKamar.Location = new System.Drawing.Point(789, 447);
+            this.txbxIDKamar.Name = "txbxIDKamar";
+            this.txbxIDKamar.Size = new System.Drawing.Size(100, 26);
+            this.txbxIDKamar.TabIndex = 54;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(546, 450);
+            this.label8.Location = new System.Drawing.Point(789, 414);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 27);
+            this.label8.Size = new System.Drawing.Size(99, 27);
             this.label8.TabIndex = 53;
-            this.label8.Text = "Id_Pasien";
+            this.label8.Text = "Id_Kamar";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(663, 455);
+            this.button1.Location = new System.Drawing.Point(906, 419);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 54);
             this.button1.TabIndex = 52;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(13, 558);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 65);
+            this.button2.TabIndex = 60;
+            this.button2.Text = "Shift";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // ADD_KAMAR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1025, 583);
-            this.Controls.Add(this.txbxpasien);
+            this.ClientSize = new System.Drawing.Size(1025, 639);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txbxIDKamar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button6);
@@ -487,7 +504,6 @@
         private KlinikBersalinDataSetTableAdapters.PasienTableAdapter pasienTableAdapter;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox tbxhargakamar;
         private System.Windows.Forms.TextBox tbxjeniskmr;
         private System.Windows.Forms.TextBox tbxnmkamar;
@@ -509,8 +525,10 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox txbxpasien;
+        private System.Windows.Forms.TextBox txbxIDKamar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

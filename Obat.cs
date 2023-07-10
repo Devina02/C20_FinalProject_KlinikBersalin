@@ -16,10 +16,14 @@ namespace FinalProject_KlinikBersalin
         private string stringConnection = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
             "database=KlinikBersalin;User ID=sa;Password=123";
         private SqlConnection koneksi;
+        private SqlCommand comn;
+        private SqlDataAdapter adapter;
         public Obat()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            LoadDokterData();
+            LoadPasienData();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -70,6 +74,8 @@ namespace FinalProject_KlinikBersalin
             string nmObat = tbxNamaObat.Text;
             string JnsObat = tbxJenisObat.Text;
             string HargaObat = tbxHargaObat.Text;
+            string iddokter = comboBox1.SelectedValue.ToString();
+            string idpasien = comboBox2.SelectedValue.ToString();
 
             if (nmObat == "")
             {
@@ -89,13 +95,15 @@ namespace FinalProject_KlinikBersalin
                     int lastNumber = int.Parse(lastId.Substring(1));
                     newId = "B" + (lastNumber + 1).ToString("D3");
                 }
-                string insertQuery = "INSERT INTO dbo.Obat (Nama_Obat, Id_Obat, Harga_Obat, Jenis_Obat) VALUES (@Nama_Obat, @Id_Obat, @Harga_Obat, @Jenis_Obat)";
+                string insertQuery = "INSERT INTO dbo.Obat (Nama_Obat, Id_Obat, Harga_Obat, Jenis_Obat, Id_Pasien, Id_Dokter) VALUES (@Nama_Obat, @Id_Obat, @Harga_Obat, @Jenis_Obat, @Id_Pasien, @Id_Dokter)";
                 SqlCommand cmd = new SqlCommand(insertQuery, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@Nama_Obat", nmObat));
                 cmd.Parameters.Add(new SqlParameter("@Id_Obat", newId));
-                cmd.Parameters.Add(new SqlParameter("@Jenis_Obat", JnsObat));
                 cmd.Parameters.Add(new SqlParameter("@Harga_Obat", HargaObat));
+                cmd.Parameters.Add(new SqlParameter("@Jenis_Obat", JnsObat));
+                cmd.Parameters.Add(new SqlParameter("@Id_Dokter", iddokter));
+                cmd.Parameters.Add(new SqlParameter("@Id_Pasien", idpasien));
 
                 cmd.ExecuteNonQuery();
 
@@ -110,6 +118,132 @@ namespace FinalProject_KlinikBersalin
         {
             btnSimpan.Enabled = true;
             btnObat.Enabled = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Add_Shift().Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new ADD_DATA().Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new ADD_DATA_DOKTER().Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new ADD_PETUGAS().Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new ADD_KAMAR().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ADD_REKAM_MEDIS().Show();
+        }
+
+        private void LoadDokterData()
+        {
+            try
+            {
+                koneksi.Open();
+
+                string query = "SELECT Id_Dokter, Nama_Dokter FROM Dokter";
+                comn = new SqlCommand(query, koneksi);
+                DataTable dokter = new DataTable();
+
+                adapter = new SqlDataAdapter(comn);
+                adapter.Fill(dokter);
+
+                comboBox1.DisplayMember = "Nama_Dokter";
+                comboBox1.ValueMember = "Id_Dokter";
+
+                comboBox1.DataSource = dokter;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+
+        }
+        private void LoadPasienData()
+        {
+            try
+            {
+                koneksi.Open();
+
+                string query = "SELECT Id_Pasien, Nama_Pasien FROM Pasien";
+                comn = new SqlCommand(query, koneksi);
+                DataTable pasien = new DataTable();
+
+                adapter = new SqlDataAdapter(comn);
+                adapter.Fill(pasien);
+
+                comboBox2.DisplayMember = "Nama_Pasien";
+                comboBox2.ValueMember = "Id_Pasien";
+
+                comboBox2.DataSource = pasien;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string stringConnection = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
+             "database=KlinikBersalin;User ID=sa;Password=123";
+            string query = "DELETE FROM Obat WHERE Id_Obat = @Id_Obat";
+            using (SqlConnection koneksi = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, koneksi))
+                {
+                    cmd.Parameters.AddWithValue("@Id_Obat", txbxobat.Text);
+
+                    try
+                    {
+                        koneksi.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data successfully deleted.");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

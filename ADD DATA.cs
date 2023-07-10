@@ -141,6 +141,7 @@ namespace FinalProject_KlinikBersalin
                         koneksi.Open();
                         int rowsAffected = cmd.ExecuteNonQuery();
                         MessageBox.Show("Data successfully deleted.");
+                        dataGridView();
                     }
                     catch (SqlException ex)
                     {
@@ -168,6 +169,77 @@ namespace FinalProject_KlinikBersalin
         private void btnClear_Click(object sender, EventArgs e)
         {
             Refreshform();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new ADD_DATA_DOKTER().Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new ADD_PETUGAS().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new ADD_KAMAR().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new Obat().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ADD_REKAM_MEDIS().Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new Add_Shift().Show();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            {
+                string connString = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
+             "database=KlinikBersalin;User ID=sa;Password=123";
+                string query = "UPDATE Pasien SET Nama_Pasien = @Nama_Pasien, Id_Pasien = @Id_Pasien, No_Telp = @No_Telp, " +
+                               "Alamat = @Alamat";
+
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Nama_Pasien", tbxNamaPasien.Text);
+                        cmd.Parameters.AddWithValue("@Id_Pasien", txbxpasien.Text);
+                        cmd.Parameters.AddWithValue("@No_Telp", tbxTelp.Text);
+                        cmd.Parameters.AddWithValue("@Alamat", tbxAlamat.Text);
+
+                        try
+                        {
+                            conn.Open();
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            MessageBox.Show("Data successfully updated.");
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("An error occurred: " + ex.Message);
+                        }
+                    }
+                }
+            }
         }
     }
 }

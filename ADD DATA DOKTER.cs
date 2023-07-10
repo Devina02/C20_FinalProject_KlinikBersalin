@@ -119,7 +119,7 @@ namespace FinalProject_KlinikBersalin
 
         private void button8_Click(object sender, EventArgs e)
         {
-            new ADD_DATA_DOKTER().Show();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -140,6 +140,41 @@ namespace FinalProject_KlinikBersalin
         private void button5_Click(object sender, EventArgs e)
         {
             new ADD_REKAM_MEDIS().Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string stringConnection = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
+             "database=KlinikBersalin;User ID=sa;Password=123";
+            string query = "DELETE FROM Dokter WHERE Id_Dokter = @Id_Dokter";
+            using (SqlConnection koneksi = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, koneksi))
+                {
+                    cmd.Parameters.AddWithValue("@Id_Dokter", txbxIdDokter.Text);
+
+                    try
+                    {
+                        koneksi.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data successfully deleted.");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            new Add_Shift().Show();
         }
     }
    

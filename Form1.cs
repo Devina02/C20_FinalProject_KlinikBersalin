@@ -56,5 +56,15 @@ namespace FinalProject_KlinikBersalin
         {
             new Obat().Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new Add_Shift().Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

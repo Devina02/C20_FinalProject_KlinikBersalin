@@ -29,60 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbxidrm = new System.Windows.Forms.TextBox();
             this.rekamMedisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klinikBersalinDataSet = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbxjumlahobat = new System.Windows.Forms.TextBox();
+            this.tbxtindakan = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxriwayat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.rekamMedisTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.RekamMedisTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.riwayatPenyakitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tindakanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tglresepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlahObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idRekamMedisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnsimpan = new System.Windows.Forms.Button();
+            this.btnclear = new System.Windows.Forms.Button();
             this.klinikBersalinDataSet1 = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btncetak = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.txbxpasien = new System.Windows.Forms.TextBox();
+            this.txbxIDRM = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            this.idRekamMedisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlahObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tglresepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tindakanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.riwayatPenyakitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button13 = new System.Windows.Forms.Button();
+            this.cmbxiddokter = new System.Windows.Forms.ComboBox();
+            this.cmbxidpasien = new System.Windows.Forms.ComboBox();
+            this.cmbxidobat = new System.Windows.Forms.ComboBox();
+            this.klinikBersalinDataSet2 = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rekamMedisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,41 +93,34 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.cmbxidobat);
+            this.panel1.Controls.Add(this.cmbxidpasien);
+            this.panel1.Controls.Add(this.cmbxiddokter);
+            this.panel1.Controls.Add(this.tbxidrm);
+            this.panel1.Controls.Add(this.tbxjumlahobat);
+            this.panel1.Controls.Add(this.tbxtindakan);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbxriwayat);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(196, 261);
+            this.panel1.Location = new System.Drawing.Point(159, 261);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 214);
             this.panel1.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // tbxidrm
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(381, 168);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // textBox5
-            // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Id_Rekam_Medis", true));
-            this.textBox5.Location = new System.Drawing.Point(555, 64);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 26);
-            this.textBox5.TabIndex = 15;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.tbxidrm.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Id_Rekam_Medis", true));
+            this.tbxidrm.Location = new System.Drawing.Point(555, 64);
+            this.tbxidrm.Name = "tbxidrm";
+            this.tbxidrm.Size = new System.Drawing.Size(137, 26);
+            this.tbxidrm.TabIndex = 15;
+            this.tbxidrm.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // rekamMedisBindingSource
             // 
@@ -136,23 +132,23 @@
             this.klinikBersalinDataSet.DataSetName = "KlinikBersalinDataSet";
             this.klinikBersalinDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox6
+            // tbxjumlahobat
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Jumlah_Obat", true));
-            this.textBox6.Location = new System.Drawing.Point(598, 168);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(137, 26);
-            this.textBox6.TabIndex = 14;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.tbxjumlahobat.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Jumlah_Obat", true));
+            this.tbxjumlahobat.Location = new System.Drawing.Point(598, 168);
+            this.tbxjumlahobat.Name = "tbxjumlahobat";
+            this.tbxjumlahobat.Size = new System.Drawing.Size(137, 26);
+            this.tbxjumlahobat.TabIndex = 14;
+            this.tbxjumlahobat.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox8
+            // tbxtindakan
             // 
-            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Tindakan", true));
-            this.textBox8.Location = new System.Drawing.Point(209, 166);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(147, 26);
-            this.textBox8.TabIndex = 12;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.tbxtindakan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Tindakan", true));
+            this.tbxtindakan.Location = new System.Drawing.Point(209, 166);
+            this.tbxtindakan.Name = "tbxtindakan";
+            this.tbxtindakan.Size = new System.Drawing.Size(147, 26);
+            this.tbxtindakan.TabIndex = 12;
+            this.tbxtindakan.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label10
             // 
@@ -202,37 +198,13 @@
             this.label6.Text = "Id Rekam Medis";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox4
+            // tbxriwayat
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Riwayat_Penyakit", true));
-            this.textBox4.Location = new System.Drawing.Point(32, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 26);
-            this.textBox4.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Id_Obat", true));
-            this.textBox3.Location = new System.Drawing.Point(379, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 26);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Id_Pasien", true));
-            this.textBox2.Location = new System.Drawing.Point(209, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 26);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Id_Dokter", true));
-            this.textBox1.Location = new System.Drawing.Point(32, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 26);
-            this.textBox1.TabIndex = 4;
+            this.tbxriwayat.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Riwayat_Penyakit", true));
+            this.tbxriwayat.Location = new System.Drawing.Point(32, 168);
+            this.tbxriwayat.Name = "tbxriwayat";
+            this.tbxriwayat.Size = new System.Drawing.Size(154, 26);
+            this.tbxriwayat.TabIndex = 7;
             // 
             // label4
             // 
@@ -287,17 +259,17 @@
             this.label1.Size = new System.Drawing.Size(0, 37);
             this.label1.TabIndex = 23;
             // 
-            // button1
+            // btnadd
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(973, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 47);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Add Data";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnadd.BackColor = System.Drawing.Color.SlateGray;
+            this.btnadd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnadd.Location = new System.Drawing.Point(934, 270);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(183, 47);
+            this.btnadd.TabIndex = 25;
+            this.btnadd.Text = "Add Data";
+            this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -316,24 +288,24 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDokterDataGridViewTextBoxColumn,
@@ -345,220 +317,30 @@
             this.jumlahObatDataGridViewTextBoxColumn,
             this.idRekamMedisDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.rekamMedisBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.Location = new System.Drawing.Point(159, 75);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1113, 180);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SlateGray;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(973, 325);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 47);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Simpan Data";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SlateGray;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(973, 444);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 47);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Clear Data";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // klinikBersalinDataSet1
-            // 
-            this.klinikBersalinDataSet1.DataSetName = "KlinikBersalinDataSet";
-            this.klinikBersalinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SlateGray;
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(973, 381);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 47);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Cetak Rekam Medis";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Gray;
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(13, 384);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 63);
-            this.button6.TabIndex = 45;
-            this.button6.Text = "Obat";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(13, 466);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 65);
-            this.button5.TabIndex = 44;
-            this.button5.Text = "Rekam Medis";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.CadetBlue;
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(12, 296);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 65);
-            this.button7.TabIndex = 43;
-            this.button7.Text = "Kamar";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(13, 208);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(140, 67);
-            this.button8.TabIndex = 42;
-            this.button8.Text = "Petugas";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.RosyBrown;
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(12, 122);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 66);
-            this.button9.TabIndex = 41;
-            this.button9.Text = "Dokter";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.SlateGray;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(12, 35);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(141, 64);
-            this.button10.TabIndex = 40;
-            this.button10.Text = "Pasien";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // txbxpasien
-            // 
-            this.txbxpasien.Location = new System.Drawing.Point(976, 534);
-            this.txbxpasien.Name = "txbxpasien";
-            this.txbxpasien.Size = new System.Drawing.Size(100, 26);
-            this.txbxpasien.TabIndex = 57;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(976, 501);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 27);
-            this.label11.TabIndex = 56;
-            this.label11.Text = "Id_Pasien";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DimGray;
-            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(1093, 506);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(107, 54);
-            this.button11.TabIndex = 55;
-            this.button11.Text = "Delete";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // idRekamMedisDataGridViewTextBoxColumn
-            // 
-            this.idRekamMedisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idRekamMedisDataGridViewTextBoxColumn.DataPropertyName = "Id_Rekam_Medis";
-            this.idRekamMedisDataGridViewTextBoxColumn.HeaderText = "Id_Rekam_Medis";
-            this.idRekamMedisDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idRekamMedisDataGridViewTextBoxColumn.Name = "idRekamMedisDataGridViewTextBoxColumn";
-            // 
-            // jumlahObatDataGridViewTextBoxColumn
-            // 
-            this.jumlahObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jumlahObatDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_Obat";
-            this.jumlahObatDataGridViewTextBoxColumn.HeaderText = "Jumlah_Obat";
-            this.jumlahObatDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.jumlahObatDataGridViewTextBoxColumn.Name = "jumlahObatDataGridViewTextBoxColumn";
-            // 
-            // tglresepDataGridViewTextBoxColumn
-            // 
-            this.tglresepDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tglresepDataGridViewTextBoxColumn.DataPropertyName = "Tgl_resep";
-            this.tglresepDataGridViewTextBoxColumn.HeaderText = "Tgl_resep";
-            this.tglresepDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tglresepDataGridViewTextBoxColumn.Name = "tglresepDataGridViewTextBoxColumn";
-            // 
-            // tindakanDataGridViewTextBoxColumn
-            // 
-            this.tindakanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tindakanDataGridViewTextBoxColumn.DataPropertyName = "Tindakan";
-            this.tindakanDataGridViewTextBoxColumn.HeaderText = "Tindakan";
-            this.tindakanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tindakanDataGridViewTextBoxColumn.Name = "tindakanDataGridViewTextBoxColumn";
-            // 
-            // riwayatPenyakitDataGridViewTextBoxColumn
-            // 
-            this.riwayatPenyakitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.riwayatPenyakitDataGridViewTextBoxColumn.DataPropertyName = "Riwayat_Penyakit";
-            this.riwayatPenyakitDataGridViewTextBoxColumn.HeaderText = "Riwayat_Penyakit";
-            this.riwayatPenyakitDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.riwayatPenyakitDataGridViewTextBoxColumn.Name = "riwayatPenyakitDataGridViewTextBoxColumn";
-            // 
-            // idObatDataGridViewTextBoxColumn
-            // 
-            this.idObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idObatDataGridViewTextBoxColumn.DataPropertyName = "Id_Obat";
-            this.idObatDataGridViewTextBoxColumn.HeaderText = "Id_Obat";
-            this.idObatDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idObatDataGridViewTextBoxColumn.Name = "idObatDataGridViewTextBoxColumn";
-            // 
-            // idPasienDataGridViewTextBoxColumn
-            // 
-            this.idPasienDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idPasienDataGridViewTextBoxColumn.DataPropertyName = "Id_Pasien";
-            this.idPasienDataGridViewTextBoxColumn.HeaderText = "Id_Pasien";
-            this.idPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idPasienDataGridViewTextBoxColumn.Name = "idPasienDataGridViewTextBoxColumn";
             // 
             // idDokterDataGridViewTextBoxColumn
             // 
@@ -568,28 +350,279 @@
             this.idDokterDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idDokterDataGridViewTextBoxColumn.Name = "idDokterDataGridViewTextBoxColumn";
             // 
+            // idPasienDataGridViewTextBoxColumn
+            // 
+            this.idPasienDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idPasienDataGridViewTextBoxColumn.DataPropertyName = "Id_Pasien";
+            this.idPasienDataGridViewTextBoxColumn.HeaderText = "Id_Pasien";
+            this.idPasienDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idPasienDataGridViewTextBoxColumn.Name = "idPasienDataGridViewTextBoxColumn";
+            // 
+            // idObatDataGridViewTextBoxColumn
+            // 
+            this.idObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idObatDataGridViewTextBoxColumn.DataPropertyName = "Id_Obat";
+            this.idObatDataGridViewTextBoxColumn.HeaderText = "Id_Obat";
+            this.idObatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idObatDataGridViewTextBoxColumn.Name = "idObatDataGridViewTextBoxColumn";
+            // 
+            // riwayatPenyakitDataGridViewTextBoxColumn
+            // 
+            this.riwayatPenyakitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.riwayatPenyakitDataGridViewTextBoxColumn.DataPropertyName = "Riwayat_Penyakit";
+            this.riwayatPenyakitDataGridViewTextBoxColumn.HeaderText = "Riwayat_Penyakit";
+            this.riwayatPenyakitDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.riwayatPenyakitDataGridViewTextBoxColumn.Name = "riwayatPenyakitDataGridViewTextBoxColumn";
+            // 
+            // tindakanDataGridViewTextBoxColumn
+            // 
+            this.tindakanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tindakanDataGridViewTextBoxColumn.DataPropertyName = "Tindakan";
+            this.tindakanDataGridViewTextBoxColumn.HeaderText = "Tindakan";
+            this.tindakanDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.tindakanDataGridViewTextBoxColumn.Name = "tindakanDataGridViewTextBoxColumn";
+            // 
+            // tglresepDataGridViewTextBoxColumn
+            // 
+            this.tglresepDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tglresepDataGridViewTextBoxColumn.DataPropertyName = "Tgl_resep";
+            this.tglresepDataGridViewTextBoxColumn.HeaderText = "Tgl_resep";
+            this.tglresepDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.tglresepDataGridViewTextBoxColumn.Name = "tglresepDataGridViewTextBoxColumn";
+            // 
+            // jumlahObatDataGridViewTextBoxColumn
+            // 
+            this.jumlahObatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jumlahObatDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_Obat";
+            this.jumlahObatDataGridViewTextBoxColumn.HeaderText = "Jumlah_Obat";
+            this.jumlahObatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jumlahObatDataGridViewTextBoxColumn.Name = "jumlahObatDataGridViewTextBoxColumn";
+            // 
+            // idRekamMedisDataGridViewTextBoxColumn
+            // 
+            this.idRekamMedisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idRekamMedisDataGridViewTextBoxColumn.DataPropertyName = "Id_Rekam_Medis";
+            this.idRekamMedisDataGridViewTextBoxColumn.HeaderText = "Id_Rekam_Medis";
+            this.idRekamMedisDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idRekamMedisDataGridViewTextBoxColumn.Name = "idRekamMedisDataGridViewTextBoxColumn";
+            // 
+            // btnsimpan
+            // 
+            this.btnsimpan.BackColor = System.Drawing.Color.SlateGray;
+            this.btnsimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsimpan.Location = new System.Drawing.Point(934, 325);
+            this.btnsimpan.Name = "btnsimpan";
+            this.btnsimpan.Size = new System.Drawing.Size(183, 47);
+            this.btnsimpan.TabIndex = 28;
+            this.btnsimpan.Text = "Simpan Data";
+            this.btnsimpan.UseVisualStyleBackColor = false;
+            this.btnsimpan.Click += new System.EventHandler(this.btnsimpan_Click);
+            // 
+            // btnclear
+            // 
+            this.btnclear.BackColor = System.Drawing.Color.SlateGray;
+            this.btnclear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnclear.Location = new System.Drawing.Point(934, 444);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(183, 47);
+            this.btnclear.TabIndex = 29;
+            this.btnclear.Text = "Clear Data";
+            this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
+            // klinikBersalinDataSet1
+            // 
+            this.klinikBersalinDataSet1.DataSetName = "KlinikBersalinDataSet";
+            this.klinikBersalinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btncetak
+            // 
+            this.btncetak.BackColor = System.Drawing.Color.SlateGray;
+            this.btncetak.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btncetak.Location = new System.Drawing.Point(934, 381);
+            this.btncetak.Name = "btncetak";
+            this.btncetak.Size = new System.Drawing.Size(183, 47);
+            this.btncetak.TabIndex = 30;
+            this.btncetak.Text = "Cetak Rekam Medis";
+            this.btncetak.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Gray;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(13, 329);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(140, 63);
+            this.button6.TabIndex = 45;
+            this.button6.Text = "Obat";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(13, 398);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 65);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "Rekam Medis";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.CadetBlue;
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(12, 259);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(141, 65);
+            this.button7.TabIndex = 43;
+            this.button7.Text = "Kamar";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.Location = new System.Drawing.Point(13, 185);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(140, 67);
+            this.button8.TabIndex = 42;
+            this.button8.Text = "Petugas";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.RosyBrown;
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.Location = new System.Drawing.Point(12, 113);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(141, 66);
+            this.button9.TabIndex = 41;
+            this.button9.Text = "Dokter";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.SlateGray;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button10.Location = new System.Drawing.Point(12, 42);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(141, 64);
+            this.button10.TabIndex = 40;
+            this.button10.Text = "Pasien";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // txbxIDRM
+            // 
+            this.txbxIDRM.Location = new System.Drawing.Point(1168, 338);
+            this.txbxIDRM.Name = "txbxIDRM";
+            this.txbxIDRM.Size = new System.Drawing.Size(100, 26);
+            this.txbxIDRM.TabIndex = 57;
+            this.txbxIDRM.TextChanged += new System.EventHandler(this.txbxIDRM_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1133, 301);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(155, 27);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Id_RekamMedis";
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DimGray;
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button11.Location = new System.Drawing.Point(1165, 374);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(107, 54);
+            this.button11.TabIndex = 55;
+            this.button11.Text = "Delete";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button13.Location = new System.Drawing.Point(13, 472);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(140, 65);
+            this.button13.TabIndex = 60;
+            this.button13.Text = "Shift";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // cmbxiddokter
+            // 
+            this.cmbxiddokter.FormattingEnabled = true;
+            this.cmbxiddokter.Location = new System.Drawing.Point(32, 68);
+            this.cmbxiddokter.Name = "cmbxiddokter";
+            this.cmbxiddokter.Size = new System.Drawing.Size(142, 28);
+            this.cmbxiddokter.TabIndex = 17;
+            // 
+            // cmbxidpasien
+            // 
+            this.cmbxidpasien.FormattingEnabled = true;
+            this.cmbxidpasien.Location = new System.Drawing.Point(209, 68);
+            this.cmbxidpasien.Name = "cmbxidpasien";
+            this.cmbxidpasien.Size = new System.Drawing.Size(142, 28);
+            this.cmbxidpasien.TabIndex = 18;
+            // 
+            // cmbxidobat
+            // 
+            this.cmbxidobat.FormattingEnabled = true;
+            this.cmbxidobat.Location = new System.Drawing.Point(381, 68);
+            this.cmbxidobat.Name = "cmbxidobat";
+            this.cmbxidobat.Size = new System.Drawing.Size(142, 28);
+            this.cmbxidobat.TabIndex = 19;
+            // 
+            // klinikBersalinDataSet2
+            // 
+            this.klinikBersalinDataSet2.DataSetName = "KlinikBersalinDataSet";
+            this.klinikBersalinDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(381, 168);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 21;
+            // 
             // ADD_REKAM_MEDIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1302, 569);
-            this.Controls.Add(this.txbxpasien);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.txbxIDRM);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btncetak);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnclear);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnsimpan);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.label7);
             this.Name = "ADD_REKAM_MEDIS";
             this.Text = "ADD_REKAM_MEDIS";
@@ -600,6 +633,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -608,33 +642,29 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxriwayat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbxidrm;
+        private System.Windows.Forms.TextBox tbxjumlahobat;
+        private System.Windows.Forms.TextBox tbxtindakan;
         private KlinikBersalinDataSet klinikBersalinDataSet;
         private System.Windows.Forms.BindingSource rekamMedisBindingSource;
         private KlinikBersalinDataSetTableAdapters.RekamMedisTableAdapter rekamMedisTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnsimpan;
+        private System.Windows.Forms.Button btnclear;
         private KlinikBersalinDataSet klinikBersalinDataSet1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btncetak;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
@@ -649,8 +679,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tglresepDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlahObatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idRekamMedisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txbxpasien;
+        private System.Windows.Forms.TextBox txbxIDRM;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.ComboBox cmbxidobat;
+        private System.Windows.Forms.ComboBox cmbxidpasien;
+        private System.Windows.Forms.ComboBox cmbxiddokter;
+        private KlinikBersalinDataSet klinikBersalinDataSet2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
