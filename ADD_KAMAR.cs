@@ -47,7 +47,7 @@ namespace FinalProject_KlinikBersalin
         private void btnsimpan_Click(object sender, EventArgs e)
         {
             string nmKamar = tbxnmkamar.Text;
-            string IdKamar = tbxidkamar.Text;
+            string IdKamar = txbxIDKamar.Text;
             string JenisKamar = tbxjeniskmr.Text;
             string HargaKamar = tbxhargakamar.Text;
             string idpasien = comboBox1.SelectedValue.ToString();
@@ -111,10 +111,10 @@ namespace FinalProject_KlinikBersalin
         {
 
             tbxnmkamar.Text = "";
-            tbxidkamar.Text = "";
+           
             tbxhargakamar.Text = "";
             tbxjeniskmr.Text = "";
-
+            txbxIDKamar.Text = "";
             btnsimpan.Enabled = false;
             btnclear.Enabled = false;
 
@@ -189,6 +189,32 @@ namespace FinalProject_KlinikBersalin
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string nmKamar = tbxnmkamar.Text; ; 
+            string jnsKamar = tbxjeniskmr.Text; 
+            string Idkamar = txbxIDKamar.Text;
+            string hargakamar = tbxhargakamar.Text;
+            string idpasien = comboBox1.SelectedValue.ToString(); 
+
+            string updateQuery = "UPDATE dbo.Kamar SET Nama_Kamar = @Nama_Kamar, Id_Pasien = @Id_Pasien, Jenis_Kamar = @Jenis_Kamar, Harga_Kamar = @Harga_Kamar  WHERE Id_Kamar = @Id_Kamar";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@Nama_Kamar", tbxnmkamar.Text));
+            cmd.Parameters.Add(new SqlParameter("@Jenis_Kamar", tbxjeniskmr.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Kamar", txbxIDKamar.Text));
+            cmd.Parameters.Add(new SqlParameter("@Harga_Kamar", tbxhargakamar.Text)); 
+            cmd.Parameters.Add(new SqlParameter("@Id_Pasien", comboBox1.SelectedValue.ToString()));
+
+
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Kamar updated successfully.");
+            dataGridView();
+            Refreshform();
         }
     }
 }

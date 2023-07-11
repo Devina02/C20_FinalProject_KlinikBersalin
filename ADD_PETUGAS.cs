@@ -89,7 +89,6 @@ namespace FinalProject_KlinikBersalin
             tbxEmail.Text = "";
             tbxnama.Text = "";
             tbxPetugas.Text = "";
-
             BtnSimpan.Enabled = false;
             BtnClear.Enabled = false;
 
@@ -199,45 +198,26 @@ namespace FinalProject_KlinikBersalin
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            string nmPetugas = tbxnama.Text;
-            string Email = tbxEmail.Text;
-            string idkamar = cbxkamar.SelectedValue.ToString();
-            string newId = tbxPetugas.Text;
+            string nmpetugas = tbxnama.Text; 
+            string idpetugas = tbxPetugas.Text;
+            string Idkamar = cbxkamar.SelectedValue.ToString();
+            string email = tbxEmail.Text;
 
-            if (newId == "")
-            {
-                MessageBox.Show("Masukkan Petugas yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                string updateQuery = "UPDATE Data Petugas SET Nama_Petugas = @Nama_Petugas, Id_Petugas = @Id_Petugas, Email_Petugas = @Email_Petugas, Id_Kamar = @Id_Kamar WHERE Id_Petugas = @Id_Petugas";
+            string updateQuery = "UPDATE dbo.Petugas SET Nama_Petugas = @Nama_Petugas, Id_Kamar = @Id_Kamar, Email_Petugas = @Email_Petugas WHERE Id_Petugas = @Id_Petugas";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@Nama_Petugas", tbxnama.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Kamar", cbxkamar.SelectedValue.ToString()));
+            cmd.Parameters.Add(new SqlParameter("@Email_Petugas", tbxEmail.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Petugas", tbxPetugas.Text));
 
-                using (SqlConnection koneksi = new SqlConnection(stringConnection))
-                {
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, koneksi))
-                    {
-                        cmd.Parameters.Add(new SqlParameter("@Nama_Petugas", nmPetugas));
-                        cmd.Parameters.Add(new SqlParameter("@Id_Petugas", newId));
-                        cmd.Parameters.Add(new SqlParameter("@Email_Petugas", Email));
-                        cmd.Parameters.Add(new SqlParameter("@Id_Kamar", idkamar));
-                        try
-                        {
-                            koneksi.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            MessageBox.Show("Data successfully updated.");
-                            dataGridView();
-                        }
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message);
-                        }
-                    }
-                }
-            }
+
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Petugas updated successfully.");
+            dataGridView();
+            Refreshform();
         }
     }
 }

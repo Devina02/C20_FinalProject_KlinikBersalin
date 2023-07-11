@@ -60,10 +60,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dokterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -334,7 +337,7 @@
             // 
             // txbxIdDokter
             // 
-            this.txbxIdDokter.Location = new System.Drawing.Point(412, 501);
+            this.txbxIdDokter.Location = new System.Drawing.Point(144, 59);
             this.txbxIdDokter.Name = "txbxIdDokter";
             this.txbxIdDokter.Size = new System.Drawing.Size(100, 26);
             this.txbxIdDokter.TabIndex = 57;
@@ -344,7 +347,8 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(412, 468);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(144, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 27);
             this.label3.TabIndex = 56;
@@ -352,9 +356,9 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.DimGray;
+            this.button10.BackColor = System.Drawing.Color.LightSlateGray;
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(529, 473);
+            this.button10.Location = new System.Drawing.Point(264, 29);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 54);
             this.button10.TabIndex = 55;
@@ -375,16 +379,38 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button12.Location = new System.Drawing.Point(15, 29);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(107, 54);
+            this.button12.TabIndex = 59;
+            this.button12.Text = "Update";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Controls.Add(this.txbxIdDokter);
+            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(334, 467);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(384, 107);
+            this.panel1.TabIndex = 60;
+            // 
             // ADD_DATA_DOKTER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1013, 564);
+            this.ClientSize = new System.Drawing.Size(1013, 590);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.txbxIdDokter);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button10);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button1);
@@ -407,6 +433,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,5 +470,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel panel1;
     }
 }

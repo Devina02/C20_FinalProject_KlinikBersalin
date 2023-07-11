@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmbxidobat = new System.Windows.Forms.ComboBox();
+            this.txbxIDRM = new System.Windows.Forms.TextBox();
             this.cmbxidpasien = new System.Windows.Forms.ComboBox();
             this.cmbxiddokter = new System.Windows.Forms.ComboBox();
             this.tbxjumlahobat = new System.Windows.Forms.TextBox();
@@ -74,17 +75,18 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.txbxIDRM = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.klinikBersalinDataSet2 = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rekamMedisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,7 +95,6 @@
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.cmbxidobat);
-            this.panel1.Controls.Add(this.txbxIDRM);
             this.panel1.Controls.Add(this.cmbxidpasien);
             this.panel1.Controls.Add(this.cmbxiddokter);
             this.panel1.Controls.Add(this.tbxjumlahobat);
@@ -101,7 +102,6 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tbxriwayat);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -114,7 +114,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(381, 168);
+            this.dateTimePicker1.Location = new System.Drawing.Point(479, 167);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 21;
@@ -126,6 +126,15 @@
             this.cmbxidobat.Name = "cmbxidobat";
             this.cmbxidobat.Size = new System.Drawing.Size(142, 28);
             this.cmbxidobat.TabIndex = 19;
+            // 
+            // txbxIDRM
+            // 
+            this.txbxIDRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxIDRM.Location = new System.Drawing.Point(15, 60);
+            this.txbxIDRM.Name = "txbxIDRM";
+            this.txbxIDRM.Size = new System.Drawing.Size(165, 30);
+            this.txbxIDRM.TabIndex = 57;
+            this.txbxIDRM.TextChanged += new System.EventHandler(this.txbxIDRM_TextChanged);
             // 
             // cmbxidpasien
             // 
@@ -146,7 +155,7 @@
             // tbxjumlahobat
             // 
             this.tbxjumlahobat.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Jumlah_Obat", true));
-            this.tbxjumlahobat.Location = new System.Drawing.Point(598, 168);
+            this.tbxjumlahobat.Location = new System.Drawing.Point(551, 70);
             this.tbxjumlahobat.Name = "tbxjumlahobat";
             this.tbxjumlahobat.Size = new System.Drawing.Size(137, 26);
             this.tbxjumlahobat.TabIndex = 14;
@@ -165,7 +174,7 @@
             // tbxtindakan
             // 
             this.tbxtindakan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Tindakan", true));
-            this.tbxtindakan.Location = new System.Drawing.Point(209, 166);
+            this.tbxtindakan.Location = new System.Drawing.Point(277, 165);
             this.tbxtindakan.Name = "tbxtindakan";
             this.tbxtindakan.Size = new System.Drawing.Size(147, 26);
             this.tbxtindakan.TabIndex = 12;
@@ -176,7 +185,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(222, 128);
+            this.label10.Location = new System.Drawing.Point(290, 127);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 26);
             this.label10.TabIndex = 11;
@@ -188,7 +197,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(381, 129);
+            this.label9.Location = new System.Drawing.Point(479, 128);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 26);
             this.label9.TabIndex = 10;
@@ -200,7 +209,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(593, 130);
+            this.label8.Location = new System.Drawing.Point(546, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 26);
             this.label8.TabIndex = 9;
@@ -212,7 +221,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(551, 30);
+            this.label6.Location = new System.Drawing.Point(10, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 26);
             this.label6.TabIndex = 8;
@@ -222,7 +231,7 @@
             // tbxriwayat
             // 
             this.tbxriwayat.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rekamMedisBindingSource, "Riwayat_Penyakit", true));
-            this.tbxriwayat.Location = new System.Drawing.Point(32, 168);
+            this.tbxriwayat.Location = new System.Drawing.Point(74, 167);
             this.tbxriwayat.Name = "tbxriwayat";
             this.tbxriwayat.Size = new System.Drawing.Size(154, 26);
             this.tbxriwayat.TabIndex = 7;
@@ -232,7 +241,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(18, 129);
+            this.label4.Location = new System.Drawing.Point(60, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 26);
             this.label4.TabIndex = 3;
@@ -284,7 +293,7 @@
             // 
             this.btnadd.BackColor = System.Drawing.Color.SlateGray;
             this.btnadd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnadd.Location = new System.Drawing.Point(934, 292);
+            this.btnadd.Location = new System.Drawing.Point(934, 291);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(183, 47);
             this.btnadd.TabIndex = 25;
@@ -309,24 +318,24 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDokterDataGridViewTextBoxColumn,
@@ -338,24 +347,24 @@
             this.jumlahObatDataGridViewTextBoxColumn,
             this.idRekamMedisDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.rekamMedisBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.Location = new System.Drawing.Point(159, 75);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -429,9 +438,9 @@
             // 
             // btnsimpan
             // 
-            this.btnsimpan.BackColor = System.Drawing.Color.SlateGray;
+            this.btnsimpan.BackColor = System.Drawing.Color.RosyBrown;
             this.btnsimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsimpan.Location = new System.Drawing.Point(934, 347);
+            this.btnsimpan.Location = new System.Drawing.Point(934, 351);
             this.btnsimpan.Name = "btnsimpan";
             this.btnsimpan.Size = new System.Drawing.Size(183, 47);
             this.btnsimpan.TabIndex = 28;
@@ -441,9 +450,9 @@
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.Color.SlateGray;
+            this.btnclear.BackColor = System.Drawing.Color.SteelBlue;
             this.btnclear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnclear.Location = new System.Drawing.Point(934, 466);
+            this.btnclear.Location = new System.Drawing.Point(934, 473);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(183, 47);
             this.btnclear.TabIndex = 29;
@@ -458,9 +467,9 @@
             // 
             // btncetak
             // 
-            this.btncetak.BackColor = System.Drawing.Color.SlateGray;
+            this.btncetak.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btncetak.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncetak.Location = new System.Drawing.Point(934, 403);
+            this.btncetak.Location = new System.Drawing.Point(934, 413);
             this.btncetak.Name = "btncetak";
             this.btncetak.Size = new System.Drawing.Size(183, 47);
             this.btncetak.TabIndex = 30;
@@ -542,20 +551,11 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // txbxIDRM
-            // 
-            this.txbxIDRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxIDRM.Location = new System.Drawing.Point(556, 68);
-            this.txbxIDRM.Name = "txbxIDRM";
-            this.txbxIDRM.Size = new System.Drawing.Size(165, 30);
-            this.txbxIDRM.TabIndex = 57;
-            this.txbxIDRM.TextChanged += new System.EventHandler(this.txbxIDRM_TextChanged);
-            // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.DimGray;
+            this.button11.BackColor = System.Drawing.Color.LightSlateGray;
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(1161, 400);
+            this.button11.Location = new System.Drawing.Point(46, 100);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(107, 54);
             this.button11.TabIndex = 55;
@@ -583,36 +583,49 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1159, 466);
+            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(46, 162);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 38);
+            this.button1.Size = new System.Drawing.Size(105, 52);
             this.button1.TabIndex = 61;
             this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel2.Controls.Add(this.button11);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txbxIDRM);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(1140, 297);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 226);
+            this.panel2.TabIndex = 62;
             // 
             // ADD_REKAM_MEDIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1302, 569);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button6);
+            this.ClientSize = new System.Drawing.Size(1361, 578);
             this.Controls.Add(this.btncetak);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnclear);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.btnsimpan);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.btnadd);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.label7);
             this.Name = "ADD_REKAM_MEDIS";
             this.Text = "ADD_REKAM_MEDIS";
@@ -624,6 +637,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,5 +692,6 @@
         private KlinikBersalinDataSet klinikBersalinDataSet2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

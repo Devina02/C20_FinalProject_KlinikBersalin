@@ -261,43 +261,26 @@ namespace FinalProject_KlinikBersalin
             string iddokter = comboBox1.SelectedValue.ToString();
             string idpasien = comboBox2.SelectedValue.ToString();
 
-            if (idObat == "")
-            {
-                MessageBox.Show("Masukkan Id_Obat yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                string updateQuery = "UPDATE Obat SET Nama_Obat = @Nama_Obat, Jenis_Obat = @Jenis_Obat, Id_Dokter = @Id_Dokter, Id_Pasien = @Id_Pasien, Tgl_resep = @Tgl_resep, Harga_Obat = @Harga_Obat WHERE Id_Obat = @Id_Obat";
+            string updateQuery = "UPDATE Obat SET Nama_Obat = @Nama_Obat, Jenis_Obat = @Jenis_Obat, Id_Dokter = @Id_Dokter, Id_Pasien = @Id_Pasien, Harga_Obat = @Harga_Obat WHERE Id_Obat = @Id_Obat";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Nama_Obat", nmObat);
+            cmd.Parameters.Add(new SqlParameter("@Jenis_Obat", tbxJenisObat.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Obat", txbxobat.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Dokter", comboBox1.SelectedValue.ToString()));
+            cmd.Parameters.Add(new SqlParameter("@Id_Pasien", comboBox2.SelectedValue.ToString()));
+            cmd.Parameters.Add(new SqlParameter("@Harga_Obat", tbxHargaObat.Text));
 
-                using (SqlConnection koneksi = new SqlConnection(stringConnection))
-                {
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, koneksi))
-                    {
-                        cmd.Parameters.AddWithValue("@Nama_Obat", nmObat);
-                        cmd.Parameters.AddWithValue("@Jenis_Obat", JnsObat);
-                        cmd.Parameters.AddWithValue("@Id_Obat", idObat);
-                        cmd.Parameters.AddWithValue("@Id_Dokter", iddokter);
-                        cmd.Parameters.AddWithValue("@Id_Pasien", idpasien);
-                        cmd.Parameters.AddWithValue("@Harga_Obat", HargaObat);
-                        try
-                        {
-                            koneksi.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            MessageBox.Show("Data successfully updated.");
-                            dataGridView();
-                        }
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message);
-                        }
-                    }
-                }
-            }
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Petugas updated successfully.");
+            dataGridView();
+            Refreshform();
+
+
+        }
 
         }
     }
-}
+

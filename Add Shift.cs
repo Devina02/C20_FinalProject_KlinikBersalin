@@ -201,5 +201,29 @@ namespace FinalProject_KlinikBersalin
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string IdKamar = comboBox2.SelectedValue.ToString(); ;
+            string IdPetugas = comboBox1.SelectedValue.ToString(); ;
+            string JamTugas = tbxjamtugas.Text;
+            string IdShift = txbxIdShift.Text;
+
+            string updateQuery = "UPDATE dbo.Shiftt SET Jam_Tugas = @Jam_Tugas, Id_Kamar = @Id_Kamar, Id_Petugas = @Id_Petugas WHERE Id_Shift = @Id_Shift";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@Jam_Tugas", tbxjamtugas.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Shift", txbxIdShift.Text));
+            cmd.Parameters.Add(new SqlParameter("@Id_Kamar", comboBox2.SelectedValue.ToString()));
+            cmd.Parameters.Add(new SqlParameter("@Id_Petugas", comboBox1.SelectedValue.ToString()));
+
+
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Shift updated successfully.");
+            dataGridView();
+            Refreshform();
+        }
     }
 }

@@ -176,6 +176,27 @@ namespace FinalProject_KlinikBersalin
         {
             new Add_Shift().Show();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string IdDokter = txbxIdDokter.Text;
+            string email = tbxemail.Text;
+            string namadokter = tbxnama.Text;
+
+            string updateQuery = "UPDATE dbo.Dokter SET Email_Dokter = @Email_Dokter, Nama_Dokter = @Nama_Dokter WHERE Id_Dokter = @Id_Dokter";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@Id_Dokter", IdDokter));
+            cmd.Parameters.Add(new SqlParameter("@Email_Dokter", email));
+            cmd.Parameters.Add(new SqlParameter("@Nama_Dokter", namadokter));
+
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Dokter updated successfully.");
+            dataGridView();
+            Refreshform();
+        }
     }
    
 }

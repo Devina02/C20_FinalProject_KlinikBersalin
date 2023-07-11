@@ -39,7 +39,6 @@
             this.shifttBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtnSimpan = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxPetugas = new System.Windows.Forms.TextBox();
             this.tbxnama = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxkamar = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.shifttTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.ShifttTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -66,12 +64,14 @@
             this.petugasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.petugasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shifttBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petugasBindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // petugasBindingSource
@@ -122,9 +122,9 @@
             // 
             this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnClear.Location = new System.Drawing.Point(720, 377);
+            this.BtnClear.Location = new System.Drawing.Point(521, 460);
             this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(157, 60);
+            this.BtnClear.Size = new System.Drawing.Size(128, 60);
             this.BtnClear.TabIndex = 31;
             this.BtnClear.Text = "Clear Data";
             this.BtnClear.UseVisualStyleBackColor = false;
@@ -139,9 +139,9 @@
             // 
             this.BtnSimpan.BackColor = System.Drawing.Color.RosyBrown;
             this.BtnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSimpan.Location = new System.Drawing.Point(507, 377);
+            this.BtnSimpan.Location = new System.Drawing.Point(359, 460);
             this.BtnSimpan.Name = "BtnSimpan";
-            this.BtnSimpan.Size = new System.Drawing.Size(157, 60);
+            this.BtnSimpan.Size = new System.Drawing.Size(137, 60);
             this.BtnSimpan.TabIndex = 28;
             this.BtnSimpan.Text = "Simpan Data";
             this.BtnSimpan.UseVisualStyleBackColor = false;
@@ -151,26 +151,18 @@
             // 
             this.BtnAdd.BackColor = System.Drawing.Color.SlateGray;
             this.BtnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnAdd.Location = new System.Drawing.Point(279, 377);
+            this.BtnAdd.Location = new System.Drawing.Point(201, 460);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(157, 60);
+            this.BtnAdd.Size = new System.Drawing.Size(134, 60);
             this.BtnAdd.TabIndex = 30;
             this.BtnAdd.Text = "Add Data";
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.petugasBindingSource, "Id_Kamar", true));
-            this.textBox4.Location = new System.Drawing.Point(561, 29);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 26);
-            this.textBox4.TabIndex = 7;
-            // 
             // tbxEmail
             // 
             this.tbxEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.petugasBindingSource, "Email_Petugas", true));
-            this.tbxEmail.Location = new System.Drawing.Point(189, 72);
+            this.tbxEmail.Location = new System.Drawing.Point(189, 91);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(215, 26);
             this.tbxEmail.TabIndex = 6;
@@ -178,7 +170,7 @@
             // tbxPetugas
             // 
             this.tbxPetugas.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.petugasBindingSource, "Id_Petugas", true));
-            this.tbxPetugas.Location = new System.Drawing.Point(500, 498);
+            this.tbxPetugas.Location = new System.Drawing.Point(17, 64);
             this.tbxPetugas.Name = "tbxPetugas";
             this.tbxPetugas.Size = new System.Drawing.Size(111, 26);
             this.tbxPetugas.TabIndex = 5;
@@ -196,7 +188,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(439, 72);
+            this.label4.Location = new System.Drawing.Point(6, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 26);
             this.label4.TabIndex = 3;
@@ -207,7 +199,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Location = new System.Drawing.Point(6, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 26);
             this.label3.TabIndex = 2;
@@ -228,17 +220,15 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SlateGray;
             this.groupBox1.Controls.Add(this.cbxkamar);
-            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tbxEmail);
             this.groupBox1.Controls.Add(this.tbxnama);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(201, 73);
+            this.groupBox1.Location = new System.Drawing.Point(201, 242);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(798, 120);
+            this.groupBox1.Size = new System.Drawing.Size(463, 192);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Petugas";
@@ -247,21 +237,10 @@
             // cbxkamar
             // 
             this.cbxkamar.FormattingEnabled = true;
-            this.cbxkamar.Location = new System.Drawing.Point(561, 70);
+            this.cbxkamar.Location = new System.Drawing.Point(187, 148);
             this.cbxkamar.Name = "cbxkamar";
             this.cbxkamar.Size = new System.Drawing.Size(215, 28);
             this.cbxkamar.TabIndex = 61;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(439, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 26);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Id Petugas";
             // 
             // shifttTableAdapter
             // 
@@ -340,7 +319,8 @@
             this.label8.AutoSize = true;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(500, 465);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(17, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 27);
             this.label8.TabIndex = 41;
@@ -348,11 +328,11 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.BackColor = System.Drawing.Color.DimGray;
-            this.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDelete.Location = new System.Drawing.Point(617, 470);
+            this.BtnDelete.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnDelete.ForeColor = System.Drawing.Color.AliceBlue;
+            this.BtnDelete.Location = new System.Drawing.Point(164, 13);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(107, 54);
+            this.BtnDelete.Size = new System.Drawing.Size(118, 53);
             this.BtnDelete.TabIndex = 40;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = false;
@@ -368,11 +348,11 @@
             this.emailPetugasDataGridViewTextBoxColumn,
             this.idKamarDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.petugasBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(201, 208);
+            this.dataGridView1.Location = new System.Drawing.Point(201, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(653, 150);
             this.dataGridView1.TabIndex = 43;
             // 
             // namaPetugasDataGridViewTextBoxColumn
@@ -426,13 +406,27 @@
             // 
             // btnupdate
             // 
-            this.btnupdate.Location = new System.Drawing.Point(745, 470);
+            this.btnupdate.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnupdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnupdate.Location = new System.Drawing.Point(164, 72);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(109, 54);
+            this.btnupdate.Size = new System.Drawing.Size(118, 57);
             this.btnupdate.TabIndex = 61;
             this.btnupdate.Text = "Update";
-            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.UseVisualStyleBackColor = false;
             this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.btnupdate);
+            this.panel1.Controls.Add(this.BtnDelete);
+            this.panel1.Controls.Add(this.tbxPetugas);
+            this.panel1.Location = new System.Drawing.Point(685, 258);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(315, 139);
+            this.panel1.TabIndex = 62;
             // 
             // ADD_PETUGAS
             // 
@@ -440,12 +434,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1025, 589);
-            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.tbxPetugas);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -469,6 +460,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petugasBindingSource1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,7 +477,6 @@
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button BtnSimpan;
         private System.Windows.Forms.Button BtnAdd;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxPetugas;
         private System.Windows.Forms.TextBox tbxnama;
@@ -510,7 +502,7 @@
         private System.Windows.Forms.BindingSource petugasBindingSource1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbxkamar;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -208,38 +208,30 @@ namespace FinalProject_KlinikBersalin
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            {
-                string connString = " data source = LAPTOP-DP3PQGGM\\DEPIIII;" +
-             "database=KlinikBersalin;User ID=sa;Password=123";
-                string query = "UPDATE Pasien SET Nama_Pasien = @Nama_Pasien, Id_Pasien = @Id_Pasien, No_Telp = @No_Telp, " +
-                               "Alamat = @Alamat";
+            string IdPasien = txbxpasien.Text;
+            string nmPasien = tbxNamaPasien.Text;
+            string noTelp = tbxTelp.Text;
+            string alamt = tbxAlamat.Text;
 
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Nama_Pasien", tbxNamaPasien.Text);
-                        cmd.Parameters.AddWithValue("@Id_Pasien", txbxpasien.Text);
-                        cmd.Parameters.AddWithValue("@No_Telp", tbxTelp.Text);
-                        cmd.Parameters.AddWithValue("@Alamat", tbxAlamat.Text);
+            string updateQuery = "UPDATE dbo.Pasien SET Nama_Pasien = @Nama_Pasien, No_Telp = @No_Telp, alamat = @alamat WHERE Id_Pasien = @Id_Pasien";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@Nama_Pasien", nmPasien));
+            cmd.Parameters.Add(new SqlParameter("@No_Telp", noTelp));
+            cmd.Parameters.Add(new SqlParameter("@alamat", alamt));
+            cmd.Parameters.Add(new SqlParameter("@Id_Pasien", IdPasien));
 
-                        try
-                        {
-                            conn.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            MessageBox.Show("Data successfully updated.");
-                        }
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message);
-                        }
-                    }
-                }
-            }
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Pasien updated successfully.");
+            dataGridView();
+            Refreshform();
+        }
+
+        private void txbxpasien_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
