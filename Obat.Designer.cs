@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.obatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klinikBersalinDataSet = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
@@ -42,6 +42,10 @@
             this.idDokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbxHargaObat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbxJenisObat = new System.Windows.Forms.TextBox();
@@ -64,10 +68,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.obatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -100,12 +101,12 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
@@ -194,6 +195,44 @@
             this.panel1.Size = new System.Drawing.Size(570, 242);
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(309, 197);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(217, 28);
+            this.comboBox2.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(306, 168);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 26);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Id Pasien";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(23, 197);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 28);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(25, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 26);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Id Dokter";
             // 
             // tbxHargaObat
             // 
@@ -286,6 +325,7 @@
             this.btnClear.TabIndex = 38;
             this.btnClear.Text = "Clear Data";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSimpan
             // 
@@ -427,43 +467,15 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label4
+            // btnUpdate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(25, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 26);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Id Dokter";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 28);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(306, 168);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 26);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Id Pasien";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(309, 197);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(217, 28);
-            this.comboBox2.TabIndex = 14;
+            this.btnUpdate.Location = new System.Drawing.Point(662, 549);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(107, 54);
+            this.btnUpdate.TabIndex = 61;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Obat
             // 
@@ -471,6 +483,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1021, 622);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txbxobat);
             this.Controls.Add(this.label1);
@@ -540,5 +553,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

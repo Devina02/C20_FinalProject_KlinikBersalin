@@ -196,5 +196,48 @@ namespace FinalProject_KlinikBersalin
         {
             Refreshform();
         }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            string nmPetugas = tbxnama.Text;
+            string Email = tbxEmail.Text;
+            string idkamar = cbxkamar.SelectedValue.ToString();
+            string newId = tbxPetugas.Text;
+
+            if (newId == "")
+            {
+                MessageBox.Show("Masukkan Petugas yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string updateQuery = "UPDATE Data Petugas SET Nama_Petugas = @Nama_Petugas, Id_Petugas = @Id_Petugas, Email_Petugas = @Email_Petugas, Id_Kamar = @Id_Kamar WHERE Id_Petugas = @Id_Petugas";
+
+                using (SqlConnection koneksi = new SqlConnection(stringConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand(updateQuery, koneksi))
+                    {
+                        cmd.Parameters.Add(new SqlParameter("@Nama_Petugas", nmPetugas));
+                        cmd.Parameters.Add(new SqlParameter("@Id_Petugas", newId));
+                        cmd.Parameters.Add(new SqlParameter("@Email_Petugas", Email));
+                        cmd.Parameters.Add(new SqlParameter("@Id_Kamar", idkamar));
+                        try
+                        {
+                            koneksi.Open();
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            MessageBox.Show("Data successfully updated.");
+                            dataGridView();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("An error occurred: " + ex.Message);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

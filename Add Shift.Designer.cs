@@ -149,7 +149,7 @@
             // 
             // txbxIdShift
             // 
-            this.txbxIdShift.Location = new System.Drawing.Point(829, 294);
+            this.txbxIdShift.Location = new System.Drawing.Point(877, 299);
             this.txbxIdShift.Name = "txbxIdShift";
             this.txbxIdShift.Size = new System.Drawing.Size(97, 26);
             this.txbxIdShift.TabIndex = 7;
@@ -226,7 +226,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(839, 255);
+            this.label1.Location = new System.Drawing.Point(887, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 27);
             this.label1.TabIndex = 53;
@@ -236,7 +236,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(823, 326);
+            this.button1.Location = new System.Drawing.Point(871, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 54);
             this.button1.TabIndex = 52;
@@ -267,7 +267,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.SteelBlue;
             this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClear.Location = new System.Drawing.Point(644, 456);
+            this.btnClear.Location = new System.Drawing.Point(644, 470);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(157, 60);
             this.btnClear.TabIndex = 58;
@@ -279,7 +279,7 @@
             // 
             this.btnSimpan.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSimpan.Location = new System.Drawing.Point(431, 456);
+            this.btnSimpan.Location = new System.Drawing.Point(431, 470);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(157, 60);
             this.btnSimpan.TabIndex = 56;
@@ -291,7 +291,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.SlateGray;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(203, 456);
+            this.btnAdd.Location = new System.Drawing.Point(203, 470);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(157, 60);
             this.btnAdd.TabIndex = 57;
@@ -340,7 +340,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(594, 218);
+            this.dataGridView2.Size = new System.Drawing.Size(649, 218);
             this.dataGridView2.TabIndex = 61;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 

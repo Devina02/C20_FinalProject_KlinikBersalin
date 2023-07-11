@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace FinalProject_KlinikBersalin
             LoadDokterData();
             LoadObatData();
             LoadPasienData();
+            dataGridView();
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -106,7 +108,7 @@ namespace FinalProject_KlinikBersalin
             cmbxiddokter.Text = "";
             cmbxidpasien.Text = "";
             cmbxidobat.Text = "";
-            tbxidrm.Text = "";
+            txbxIDRM.Text = "";
             tbxriwayat.Text = "";
             tbxjumlahobat.Text = "";
             dateTimePicker1.Text = "";
@@ -122,12 +124,12 @@ namespace FinalProject_KlinikBersalin
             string IdDokter = cmbxiddokter.SelectedValue.ToString();
             string IdPasien = cmbxidpasien.SelectedValue.ToString();
             string IdObat = cmbxidobat.SelectedValue.ToString();
-            string IdRekamMedis = tbxidrm.Text;
+            string IdRekamMedis = Guid.NewGuid().ToString().Substring(0, 5);
             string RiwayatPenyakit = tbxriwayat.Text;
             string Tindakan = tbxtindakan.Text;
             string JumlahObat = tbxjumlahobat.Text;
             DateTime TglResep = dateTimePicker1.Value;
-            
+
 
 
             if (RiwayatPenyakit == "")
@@ -140,6 +142,7 @@ namespace FinalProject_KlinikBersalin
                 string getIdQuery = "SELECT MAX(Id_Rekam_Medis) FROM dbo.RekamMedis";
                 SqlCommand getIdCmd = new SqlCommand(getIdQuery, koneksi);
                 object result = getIdCmd.ExecuteScalar();
+
                 string newId = "R001";
 
                 if (result != null && result != DBNull.Value)
@@ -148,6 +151,7 @@ namespace FinalProject_KlinikBersalin
                     int lastNumber = int.Parse(lastId.Substring(1));
                     newId = "R" + (lastNumber + 1).ToString("D3");
                 }
+
                 string insertQuery = "INSERT INTO dbo.RekamMedis (Id_Dokter, Id_Pasien, Id_Obat, Riwayat_Penyakit, Tindakan, Tgl_resep, Jumlah_Obat, Id_Rekam_Medis) VALUES (@Id_Dokter, @Id_Pasien, @Id_Obat, @Riwayat_Penyakit, @Tindakan, @Tgl_resep, @Jumlah_Obat, @Id_Rekam_Medis)";
                 SqlCommand cmd = new SqlCommand(insertQuery, koneksi);
                 cmd.CommandType = CommandType.Text;
@@ -334,5 +338,91 @@ namespace FinalProject_KlinikBersalin
         {
             new Add_Shift().Show();
         }
+
+        private void btncetak_Click(object sender, EventArgs e)
+        {
+            {
+                PrintDocument printDocument = new PrintDocument();
+                printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
+                PrintDialog printDialog = new PrintDialog();
+                printDialog.Document = printDocument;
+
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument.Print();
+                }
+            }
+
+
+        }
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font("Arial", 12, FontStyle.Regular, GraphicsUnit.Point);
+            Brush brush = Brushes.Black;
+
+            float lineHeight = font.GetHeight();
+            float x = e.MarginBounds.Left;
+            float y = e.MarginBounds.Top;
+
+            // Prepare the content to be printed
+            StringBuilder content = new StringBuilder();
+            content.AppendLine("ID Rekam Medis: " + txbxIDRM.Text);
+            content.AppendLine("ID Dokter: " + cmbxiddokter.SelectedValue);
+            content.AppendLine("Id Obat: " + cmbxidobat.SelectedValue);
+            content.AppendLine("Id Pasien: " + cmbxidpasien.SelectedValue);
+            content.AppendLine("Riwayat Penyakit: " + tbxriwayat.Text);
+            content.AppendLine("Tindakan: " + tbxtindakan.Text);
+            content.AppendLine("Tanggal Resep: " + dateTimePicker1.Text);
+            content.AppendLine("Jumlah Obat: " + tbxjumlahobat.Text);
+
+            // Print the content
+            e.Graphics.DrawString(content.ToString(), font, brush, x, y);
+
+            // Move the cursor to the next line
+            y += lineHeight;
+
+            // Check if there is more content to print
+            if (y + lineHeight < e.MarginBounds.Bottom)
+            {
+                e.HasMorePages = false;  // All content has been printed
+            }
+            else
+            {
+                e.HasMorePages = true;  // There is more content to print
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            string IdDokter = cmbxiddokter.SelectedValue.ToString();
+            string IdPasien = cmbxidpasien.SelectedValue.ToString();
+            string IdObat = cmbxidobat.SelectedValue.ToString();
+            string IdRekamMedis = txbxIDRM.Text;
+            string RiwayatPenyakit = tbxriwayat.Text;
+            string Tindakan = tbxtindakan.Text;
+            string JumlahObat = tbxjumlahobat.Text;
+            DateTime TglResep = dateTimePicker1.Value;
+
+            string updateQuery = "UPDATE dbo.RekamMedis SET Id_Dokter = @Id_Dokter, Id_Pasien = @Id_Pasien, Id_Obat = @Id_Obat, Riwayat_Penyakit = @Riwayat_Penyakit, Tindakan = @Tindakan, Tgl_resep = @Tgl_resep, Jumlah_Obat = @Jumlah_Obat WHERE Id_Rekam_Medis = @Id_Rekam_Medis";
+            SqlCommand cmd = new SqlCommand(updateQuery, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@Id_Dokter", IdDokter));
+            cmd.Parameters.Add(new SqlParameter("@Id_Rekam_Medis", IdRekamMedis));
+            cmd.Parameters.Add(new SqlParameter("@Id_Pasien", IdPasien));
+            cmd.Parameters.Add(new SqlParameter("@Id_Obat", IdObat));
+            cmd.Parameters.Add(new SqlParameter("@Riwayat_Penyakit", RiwayatPenyakit));
+            cmd.Parameters.Add(new SqlParameter("@Tindakan", Tindakan));
+            cmd.Parameters.Add(new SqlParameter("@Tgl_resep", TglResep));
+            cmd.Parameters.Add(new SqlParameter("@Jumlah_Obat", JumlahObat));
+
+            koneksi.Open();
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Rekam Medis updated successfully.");
+            dataGridView();
+            Refreshform();
+        }
     }
 }
+

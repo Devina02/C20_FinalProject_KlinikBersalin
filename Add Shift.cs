@@ -194,7 +194,7 @@ namespace FinalProject_KlinikBersalin
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            Refreshform();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

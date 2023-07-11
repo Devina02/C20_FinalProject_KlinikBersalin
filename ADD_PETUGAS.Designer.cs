@@ -47,6 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxkamar = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.shifttTableAdapter = new FinalProject_KlinikBersalin.KlinikBersalinDataSetTableAdapters.ShifttTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -63,8 +65,7 @@
             this.idKamarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.petugasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbxkamar = new System.Windows.Forms.ComboBox();
+            this.btnupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.petugasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klinikBersalinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shifttBindingSource)).BeginInit();
@@ -243,6 +244,25 @@
             this.groupBox1.Text = "Petugas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // cbxkamar
+            // 
+            this.cbxkamar.FormattingEnabled = true;
+            this.cbxkamar.Location = new System.Drawing.Point(561, 70);
+            this.cbxkamar.Name = "cbxkamar";
+            this.cbxkamar.Size = new System.Drawing.Size(215, 28);
+            this.cbxkamar.TabIndex = 61;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(439, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 26);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Id Petugas";
+            // 
             // shifttTableAdapter
             // 
             this.shifttTableAdapter.ClearBeforeFill = true;
@@ -404,24 +424,15 @@
             this.button2.Text = "Shift";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // btnupdate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(439, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 26);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Id Petugas";
-            // 
-            // cbxkamar
-            // 
-            this.cbxkamar.FormattingEnabled = true;
-            this.cbxkamar.Location = new System.Drawing.Point(561, 70);
-            this.cbxkamar.Name = "cbxkamar";
-            this.cbxkamar.Size = new System.Drawing.Size(215, 28);
-            this.cbxkamar.TabIndex = 61;
+            this.btnupdate.Location = new System.Drawing.Point(745, 470);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(109, 54);
+            this.btnupdate.TabIndex = 61;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // ADD_PETUGAS
             // 
@@ -429,6 +440,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1025, 589);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tbxPetugas);
@@ -499,5 +511,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbxkamar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnupdate;
     }
 }
