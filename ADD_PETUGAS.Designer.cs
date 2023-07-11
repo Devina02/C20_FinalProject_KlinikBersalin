@@ -170,7 +170,7 @@
             // tbxPetugas
             // 
             this.tbxPetugas.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.petugasBindingSource, "Id_Petugas", true));
-            this.tbxPetugas.Location = new System.Drawing.Point(17, 64);
+            this.tbxPetugas.Location = new System.Drawing.Point(17, 69);
             this.tbxPetugas.Name = "tbxPetugas";
             this.tbxPetugas.Size = new System.Drawing.Size(111, 26);
             this.tbxPetugas.TabIndex = 5;
@@ -256,6 +256,7 @@
             this.button6.TabIndex = 39;
             this.button6.Text = "Obat";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -267,6 +268,7 @@
             this.button5.TabIndex = 38;
             this.button5.Text = "Rekam Medis";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -278,6 +280,7 @@
             this.button4.TabIndex = 37;
             this.button4.Text = "Kamar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -301,6 +304,7 @@
             this.button8.TabIndex = 35;
             this.button8.Text = "Dokter";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -313,6 +317,7 @@
             this.button9.TabIndex = 34;
             this.button9.Text = "Pasien";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label8
             // 
@@ -403,6 +408,7 @@
             this.button2.TabIndex = 60;
             this.button2.Text = "Shift";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnupdate
             // 

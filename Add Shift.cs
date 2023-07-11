@@ -225,5 +225,35 @@ namespace FinalProject_KlinikBersalin
             dataGridView();
             Refreshform();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new ADD_DATA().Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new ADD_DATA_DOKTER().Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new ADD_PETUGAS().Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new ADD_KAMAR().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new Obat().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ADD_REKAM_MEDIS().Show();
+        }
     }
 }

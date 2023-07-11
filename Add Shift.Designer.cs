@@ -167,6 +167,7 @@
             this.button6.TabIndex = 51;
             this.button6.Text = "Obat";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -178,6 +179,7 @@
             this.button5.TabIndex = 50;
             this.button5.Text = "Rekam Medis";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button7
             // 
@@ -189,6 +191,7 @@
             this.button7.TabIndex = 49;
             this.button7.Text = "Kamar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -200,6 +203,7 @@
             this.button8.TabIndex = 48;
             this.button8.Text = "Petugas";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -211,6 +215,7 @@
             this.button9.TabIndex = 47;
             this.button9.Text = "Dokter";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -223,6 +228,7 @@
             this.button10.TabIndex = 46;
             this.button10.Text = "Pasien";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label1
             // 
@@ -238,7 +244,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(49, 92);
             this.button1.Name = "button1";
@@ -283,7 +289,7 @@
             // 
             this.btnSimpan.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSimpan.Location = new System.Drawing.Point(431, 470);
+            this.btnSimpan.Location = new System.Drawing.Point(425, 470);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(157, 60);
             this.btnSimpan.TabIndex = 56;
