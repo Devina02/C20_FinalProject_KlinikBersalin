@@ -274,13 +274,17 @@ namespace FinalProject_KlinikBersalin
             koneksi.Open();
             cmd.ExecuteNonQuery();
             koneksi.Close();
-            MessageBox.Show("Data Petugas updated successfully.");
+            MessageBox.Show("Data Obat updated successfully.");
             dataGridView();
             Refreshform();
 
 
         }
 
+        private void tbxNamaObat_TextChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 

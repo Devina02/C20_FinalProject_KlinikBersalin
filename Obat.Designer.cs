@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.obatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klinikBersalinDataSet = new FinalProject_KlinikBersalin.KlinikBersalinDataSet();
@@ -49,10 +49,8 @@
             this.tbxHargaObat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbxJenisObat = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tbxNamaObat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -103,12 +101,12 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
@@ -187,10 +185,8 @@
             this.panel1.Controls.Add(this.tbxHargaObat);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.tbxJenisObat);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.tbxNamaObat);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(201, 277);
             this.panel1.Name = "panel1";
@@ -201,7 +197,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(309, 197);
+            this.comboBox2.Location = new System.Drawing.Point(309, 147);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(217, 28);
             this.comboBox2.TabIndex = 14;
@@ -211,7 +207,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(306, 168);
+            this.label9.Location = new System.Drawing.Point(306, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 26);
             this.label9.TabIndex = 13;
@@ -238,7 +234,7 @@
             // 
             // tbxHargaObat
             // 
-            this.tbxHargaObat.Location = new System.Drawing.Point(311, 118);
+            this.tbxHargaObat.Location = new System.Drawing.Point(311, 68);
             this.tbxHargaObat.Name = "tbxHargaObat";
             this.tbxHargaObat.Size = new System.Drawing.Size(215, 26);
             this.tbxHargaObat.TabIndex = 10;
@@ -248,7 +244,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(306, 84);
+            this.label8.Location = new System.Drawing.Point(306, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(124, 26);
             this.label8.TabIndex = 8;
@@ -261,19 +257,13 @@
             this.tbxJenisObat.Size = new System.Drawing.Size(215, 26);
             this.tbxJenisObat.TabIndex = 6;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(311, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 26);
-            this.textBox2.TabIndex = 5;
-            // 
             // tbxNamaObat
             // 
             this.tbxNamaObat.Location = new System.Drawing.Point(23, 41);
             this.tbxNamaObat.Name = "tbxNamaObat";
             this.tbxNamaObat.Size = new System.Drawing.Size(215, 26);
             this.tbxNamaObat.TabIndex = 4;
+            this.tbxNamaObat.TextChanged += new System.EventHandler(this.tbxNamaObat_TextChanged);
             // 
             // label3
             // 
@@ -285,17 +275,6 @@
             this.label3.Size = new System.Drawing.Size(116, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Jenis Obat";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(306, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 26);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Id Obat";
             // 
             // label6
             // 
@@ -544,10 +523,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idPasienDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbxJenisObat;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox tbxNamaObat;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClear;
